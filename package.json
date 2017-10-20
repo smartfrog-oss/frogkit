@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/vue": "^3.2.13",
+    "babel-preset-vue": "^1.2.1",
+    "vue-loader": "13.3.0",
+    "vue-template-compiler": "2.5.2"
+  },
+  "dependencies": {
+    "vue": "2.5.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 5000 -c .storybook",
+    "build-storybook": "build-storybook"
+  }
+}

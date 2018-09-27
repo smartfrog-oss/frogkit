@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+  - "8"
+
+sudo: false
+
+branches:
+  only:
+  - master
+  - development
+  - patch
+
+install:
+  - yarn
+
+script:
+  - yarn test
+  - yarn build
+
+cache:
+  yarn: true
+  directories:
+    - ".eslintcache"
+    - "node_modules"
+
+deploy:
+  - provider: npm
+    email: mouafa.ahmed@smartfrog.com
+    api_key:
+      secure: $NPM_TOKEN
+    on:
+      repo: smartfrog-oss/frogkit
+      branch: development
+    skip_cleanup: true
+
+  - provider: pages
+    skip-cleanup: true
+    target-branch: gh-pages
+    local-dir: dist
+    github-token: $GITHUB_TOKEN
+    on:
+      branch: development

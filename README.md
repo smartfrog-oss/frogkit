@@ -1,8 +1,12 @@
-![](logo.png)
-
 # frogkit
 
-Smartfrog components Library
+Smartfrog UI Components Library
+
+[![npm version](https://badge.fury.io/js/%40smartfrog%2Ffrogkit.svg)](https://badge.fury.io/js/%40smartfrog%2Ffrogkit)
+[![Build Status](https://api.travis-ci.org/smartfrog-oss/frogkit.svg?branch=development)](https://travis-ci.org/smartfrog-oss/frogkit#)
+
+![https://github.com/smartfrog-oss/frogkit](logo.png)
+
 
 ## Installation
 
@@ -12,43 +16,70 @@ using yarn
 yarn add @smartfrog/frogkit
 ```
 
+using npm
+
+```bash
+npm i -S @smartfrog/frogkit
+```
+
+## Usage
+component are availabale under `src/component` folder
+
+
+### use a global component 
+```js
+import button from '@smartfrog/frogkit/src/components/button'
+
+Vue.component(button.name, button)
+```
+
+### use a component when it's needed
+```js
+import button from '@smartfrog/frogkit/src/components/button'
+
+export default {
+    name: 'Example',
+    components: { button },
+  }
+```
+
 ## icons
 
-place SVG files inside `src/assets/icons`
+1. place SVG files inside `src/assets/icons`
 > NOTE: make sure that the SVG file contain viewBox attribute
 
-to generate icon components run `yarn icon`
-to script will optimise the SVG
+2. run `yarn icon`
+the script will optimise the SVG and generate an icon component for it
 
 
 ## Contribution
 
-### Fork the repo
+1. Fork the repo
 
-### install dependencies
+2. install dependencies
 
 ```bash
 yarn
 ```
 
-### Start the storybook
+3. Start the storybook
 
 ```bash
 yarn storybook
 ```
 
-### Build component
+4. Build component
 
-### Add Story for it
+5. Add Story for it
 
-### Cover it with test
+6. Cover it with test
 
-### Make sure that the test is passing
+7. Make sure that the test is passing
 
 ```bash
 yarn test
 ```
 
-### Open a PR!
+8. Open a PR!
 
-Happy Coding!
+**Happy Coding!**

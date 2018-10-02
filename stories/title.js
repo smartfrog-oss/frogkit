@@ -1,13 +1,13 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import { text, select, number } from '@storybook/addon-knobs'
+import { text, select, number, boolean } from '@storybook/addon-knobs'
 import Title from '@/components/title'
 
 const stories = storiesOf('Title', module)
 
 
 stories.add('kitchen sink', () => ({
-  template: `<Title :size="size" :color="color" :weight="weight">
+  template: `<Title :size="size" :color="color" :weight="weight" :center="center">
               {{slot}}
             </Title>`,
   data(){
@@ -15,7 +15,8 @@ stories.add('kitchen sink', () => ({
       slot: text('Text', 'Lorem ipsum dolorem'),
       size: select('Size', ['larger', 'xx-small', '100px', '8px', 'xl', 'lg', 'md', 'sm', 'xs'], 'md'),
       color: select('Color', ['default', 'primary', 'light', 'secondary'], 'primary'),
-      weight: select('Weight', ['default', 'bold', 'slim'])
+      weight: select('Weight', ['default', 'bold', 'slim']),
+      center: boolean('Center', false)
     }
   }
 }), Title)

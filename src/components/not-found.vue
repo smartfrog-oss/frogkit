@@ -9,8 +9,6 @@
     & &__exclamation
       width 95px
       height @width
-    & &__title
-      text-align center
     & &__content
       font-size 2.2rem
       color: #444
@@ -23,7 +21,7 @@
 <template>
   <Flex class="fk-not-found" align="center" justify="center" column>
     <Icon class="fk-not-found__exclamation m-b-30" icon="exclamation-circle" color="orange" />
-    <Title class="fk-not-found__title m-b-40" color="primary" size="xl">{{title}}</Title>
+    <Title class="m-b-40" color="primary" size="xl" center>{{title}}</Title>
     <p class="fk-not-found__content m-b-40" v-html="content">
     </p>
     <Button class="fk-not-found__button" :href="link"  size="big" color="secondary" link outline block>

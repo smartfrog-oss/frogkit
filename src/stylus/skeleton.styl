@@ -1,0 +1,33 @@
+$light-color = #f5f5f5
+$dark-color = #e7e7e7
+
+@keyframes pulse
+  0%
+    background-color: $light-color
+
+  100%
+    background-color: $dark-color
+
+// @keyframes slide
+// from
+// background-position: 100% 0
+
+// to
+// background-position: 0% 0
+.fk-skeleton
+  position: relative
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    min-width: 40px
+    border-radius: 4px
+    border: 2px solid white
+    background-color: $light-color
+    animation: pulse 500ms linear infinite alternate
+    // background: linear-gradient(to right, $light-color 0%, $dark-color 10%, $light-color 20%)
+    // background-size: 100vw 104px

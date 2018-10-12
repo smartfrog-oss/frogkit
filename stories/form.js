@@ -11,36 +11,39 @@ stories.addCodeExampleStory(
   () => ({
     template: `<Form v-model="isValid" class="form-demo">
     <div>
-      <Select v-model="inputs[4]" :disabled="disabled" block placeholder="Title" :options="options" :wrong="wrong" required></Select>
+      <Select v-model="inputs[0]" :disabled="disabled" block placeholder="Title" :options="options" :wrong="wrong" required></Select>
     </div>
     <div>
-      <Input v-model="inputs[0]" name="username" type="text" placeholder="username" :disabled="disabled" :wrong="wrong" required block></Input>
+      <Input v-model="inputs[1]" name="username" type="text" placeholder="username" :disabled="disabled" :wrong="wrong" required block></Input>
     </div>
     <div>
       <InputTooltip :title="title" :conditions="conditions" :status-txt="statusTxt">
-        <InputPassword v-model="inputs[1]" placeholder="InputPassword" required/>
+        <InputPassword v-model="inputs[2]" placeholder="InputPassword" required/>
       </InputTooltip>
     </div>
     <div>
       <InputTooltip :title="title" :conditions="conditions" :status-txt="statusTxt">
-        <Input v-model="inputs[1]" type="password" placeholder="password" :disabled="disabled" :wrong="wrong" required block></Input>
+        <Input v-model="inputs[3]" type="password" placeholder="password" :disabled="disabled" :wrong="wrong" required block></Input>
       </InputTooltip>
     </div>
     <div>
-      <Input v-model="inputs[2]" type="phone" placeholder="phone" :disabled="disabled" :wrong="wrong" required block></Input>
+      <Input v-model="inputs[4]" type="phone" placeholder="phone" :disabled="disabled" :wrong="wrong" required block></Input>
     </div>
     <div>
-      <Input v-model="inputs[3]" type="houseNumber" placeholder="house number" :wrong="wrong" required block></Input>
+      <Input v-model="inputs[5]" type="houseNumber" placeholder="house number" :wrong="wrong" required block></Input>
     </div>
     <div>
-      <Checkbox v-model="inputs[4]" true-value="yep" false-value="nope" :wrong="wrong" required>Accept TOS: {{inputs[3]}}</Checkbox>
+      <Input v-model="inputs[6]" type="zipCode" placeholder="zip code" :wrong="wrong" requireValidation block></Input>
+    </div>
+    <div>
+      <Checkbox v-model="inputs[7]" true-value="yep" false-value="nope" :wrong="wrong" required>Accept TOS: {{inputs[3]}}</Checkbox>
     </div>
     <h1 class="demo-title">Valid: {{isValid}}</h1>
     <Button @click="submit" color="primary" block> Submit </Button>
   </Form>`,
     data() {
       return {
-        inputs: Array.from({ length: 5 }),
+        inputs: Array.from({ length: 8 }),
         disabled: boolean('Disabled', false),
         wrong: boolean('Wrong', false),
         options: [{ value: 'Mr', label: 'Mr' }, { value: 'Mrs', label: 'Mrs' }],
@@ -96,7 +99,7 @@ stories.addCodeExampleStory(
   </Form>`,
     data() {
       return {
-        inputs: Array.from({ length: 5 }),
+        inputs: Array.from({ length: 4 }),
         disabled: boolean('Disabled', false),
         isValid: null,
       }

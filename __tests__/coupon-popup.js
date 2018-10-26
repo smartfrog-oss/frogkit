@@ -2,8 +2,6 @@ import {
   mount,
   shallow
 } from 'vue-test-utils'
-import Vue from 'vue'
-import Dialogue from '@/components/dialogue'
 import CouponPopup from '@/components/coupon-popup'
 
 const propsData = {

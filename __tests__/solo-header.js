@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import Soloheader from '@/components/solo-header'
 
 describe('Soloheader component', () => {

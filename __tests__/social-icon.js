@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import SocialIcon from '@/components/social-icon'
 
 const data = {

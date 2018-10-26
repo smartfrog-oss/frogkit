@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import Button from '@/components/button'
 
 const slots = { default: '<span>click me</span>' }

@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import PaymentMethods from '@/components/payment-methods'
 
 describe('Payment Methods component', () => {

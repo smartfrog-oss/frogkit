@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import PriceTag from '@/components/price-tag'
 
 describe('Price Tag component', () => {

@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import AppBadge from '@/components/app-badge'
 
 const data = {

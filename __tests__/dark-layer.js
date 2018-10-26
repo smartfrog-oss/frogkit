@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import DarkLayer from '@/components/dark-layer'
 
 const slots = { default: '<span>Some text here</span>' }

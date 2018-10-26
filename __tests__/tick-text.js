@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import TickText from '@/components/tick-text'
 
 describe('Tick Text component', () => {

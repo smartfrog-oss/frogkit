@@ -2,7 +2,6 @@ import {
   mount,
   shallow
 } from 'vue-test-utils'
-import Vue from 'vue'
 import CountrySelector from '@/components/country-selector'
 import countries from '../data/countries'
 

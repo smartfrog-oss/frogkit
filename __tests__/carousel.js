@@ -1,5 +1,4 @@
 import { mount, shallow } from 'vue-test-utils'
-import Vue from 'vue'
 import Carousel from '@/components/carousel'
 
 const propsData = {

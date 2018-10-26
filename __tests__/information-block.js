@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import InformationBlock from '@/components/information-block'
 
 describe('Information Block component', () => {

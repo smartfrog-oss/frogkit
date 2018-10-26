@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import CookiePolicy from '@/components/cookie-policy'
 
 describe('it should render and match snapShot', () => {

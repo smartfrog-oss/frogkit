@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import InputPassword from '@/components/input-password'
 
 describe('Input password component', () => {

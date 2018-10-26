@@ -1,5 +1,4 @@
 import { mount, shallow, skip } from 'vue-test-utils'
-import Vue from 'vue'
 // import Title from '@/components/title'
 
 const slots = { default: 'Lorem ipsum dolorem' }

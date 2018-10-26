@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import LogisticBadges from '@/components/logistic-badges'
 
 describe('Logistic Badges component', () => {

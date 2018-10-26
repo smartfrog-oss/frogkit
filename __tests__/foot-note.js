@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import FootNote from '@/components/foot-note'
 
 describe('Foot Note component', () => {

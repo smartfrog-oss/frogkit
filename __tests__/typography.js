@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import FkText from '@/components/typography'
 
 const slot = { default: 'Lorem ipsum dolorem'}

@@ -1,5 +1,4 @@
-import { mount, shallow } from 'vue-test-utils'
-import Vue from 'vue'
+import { mount } from 'vue-test-utils'
 import InputToolTip from '@/components/input-tooltip'
 import Input from '@/components/input'
 

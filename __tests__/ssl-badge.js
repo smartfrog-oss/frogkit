@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import SslBadge from '@/components/ssl-badge'
 
 describe('Ssl Badge component', () => {

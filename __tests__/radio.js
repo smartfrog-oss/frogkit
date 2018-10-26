@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import Radio from '@/components/radio'
 
 describe('Radio button component', () => {

@@ -12,22 +12,22 @@
       <Row>
         <Col xs12 lg3>
           <ul class="fk-footer__nav">
-            <li v-for="item in navItems[0]">
-              <a class="fk-footer__link":href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+            <li v-for="item in navItems[0]" :key="item.url">
+              <a class="fk-footer__link" :href="item.url">{{ item.label }}</a>
             </li>
           </ul>
         </Col>
         <Col xs12 lg3>
           <ul class="fk-footer__nav">
-            <li v-for="item in navItems[1]">
-              <a class="fk-footer__link":href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+            <li v-for="item in navItems[1]" :key="item.url">
+              <a class="fk-footer__link" :href="item.url">{{ item.label }}</a>
             </li>
           </ul>
         </Col>
         <Col xs12 lg3>
           <ul class="fk-footer__nav">
-          <li v-for="item in navItems[2]">
-              <a class="fk-footer__link":href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+          <li v-for="item in navItems[2]" :key="item.url">
+              <a class="fk-footer__link" :href="item.url">{{ item.label }}</a>
             </li>
           </ul>
         <section class="fk-footer__app-stores">
@@ -41,8 +41,8 @@
         </Col>
         <Col xs12 lg3>
           <ul class="fk-footer__nav">
-            <li v-for="item in navItems[3]">
-              <a class="fk-footer__link":href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+            <li v-for="item in navItems[3]" :key="item.url">
+              <a class="fk-footer__link" :href="item.url">{{ item.label }}</a>
             </li>
           </ul>
           <section class="fk-footer__social">

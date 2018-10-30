@@ -1,37 +1,42 @@
 @require '../_vars'
 
 flex-mixin()
-  display: flex
   // flex: 0 1 auto // this is the default
+  display: flex
   flex-direction: row
   flex-wrap: wrap
-  // flex: 1 // fill all the space; NOTE replaced with --grow
   align-items: start
-  // & > *
-    // flex: 1 1 0%;
+
   &&--grow
     flex-grow: 1
+
   &&--column
     flex-direction: column
+
   &&--justify-center
     justify-content: center
+
   &&--justify-end
     justify-content: flex-end
+
   &&--justify-space-around
     justify-content: space-around
+
   &&--justify-space-between
     justify-content: space-between
+
   &&--justify-space-evenly
     justify-content: space-around // For none supported browser
     justify-content: space-evenly
 
+    @supports (-ms-accelerator: true)
+      justify-content: space-around // Edge only fix
+
   &&--align-center
     align-items: center
+
   &&--align-end
     align-items: flex-end
+
   &&--align-stretch
     align-items: stretch
-  // &&--align-space-around
-  //   align-content: space-around
-  // &&--align-space-between
-  //   align-content: space-between

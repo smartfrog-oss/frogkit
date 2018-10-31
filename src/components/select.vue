@@ -9,7 +9,7 @@
 <template>
   <select class="fk-select" :class="classObject" @change="updateValue" @blur="validate">
     <option v-if="placeholder" value="" :selected="!value">{{placeholder}}</option>
-    <option v-for="option in options" :key="option.value" :value="option.value" :selected="value == option.value">
+    <option v-for="(option, $index) in options" :key="$index" :value="option.value" :selected="value == option.value">
       {{ option.label }}
     </option>
   </select>

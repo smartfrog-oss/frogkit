@@ -29,8 +29,8 @@ flex-mixin()
     justify-content: space-around // For none supported browser
     justify-content: space-evenly
 
-    @supports (-ms-accelerator: true)
-      justify-content: space-around // Edge only fix
+  &&--justify-space-evenly _:-ms-lang(x), &&--justify-space-evenly
+    justify-content: space-around // Edge only fix
 
   &&--align-center
     align-items: center

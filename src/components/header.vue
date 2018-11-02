@@ -42,11 +42,11 @@
           @change="countryChange" />
         <form class="fk-header__form">
            <div class="fk-header__form__field">
-              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder"></Input>
+              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" @keyup.enter.native="login" :placeholder="formItems.emailPlaceholder"></Input>
               <a :href="formItems.registerUrl">{{ formItems.registerLabel }}</a>
             </div>
              <div class="fk-header__form__field">
-                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder"></Input>
+                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" @keyup.enter.native="login" :placeholder="formItems.passwordPlaceholder"></Input>
                 <a :href="formItems.retriveUrl">{{ formItems.retriveLabel }}</a>
             </div>
         </form>
@@ -122,6 +122,7 @@
     },
     methods: {
       login() {
+        console.log('called')
         this.$emit('login', { username: this.email, password: this.password })
       },
       countryChange(currentCountry) {

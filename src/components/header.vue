@@ -129,7 +129,6 @@
     },
     methods: {
       login() {
-        console.log('called')
         this.$emit('login', { username: this.email, password: this.password })
       },
       countryChange(currentCountry) {

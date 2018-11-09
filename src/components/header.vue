@@ -40,18 +40,21 @@
           :mobileNavOpen="mobileNavOpen"
           @open="mobileNavOpen = false"
           @change="countryChange" />
-        <form class="fk-header__form">
+        <form class="fk-header__form" @submit.prevent="login">
            <div class="fk-header__form__field">
-              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" @keyup.enter.native="login" :placeholder="formItems.emailPlaceholder"></Input>
+              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder"></Input>
               <a :href="formItems.registerUrl">{{ formItems.registerLabel }}</a>
             </div>
              <div class="fk-header__form__field">
-                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" @keyup.enter.native="login" :placeholder="formItems.passwordPlaceholder"></Input>
+                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder"></Input>
                 <a :href="formItems.retriveUrl">{{ formItems.retriveLabel }}</a>
             </div>
+            <Button type="submit" color="primary" size="small" class="fk-header__form__login">
+              {{ navExtraItems[2].label }}
+            </Button>
         </form>
         <!-- login button -->
-        <Button link color="primary" size="small" class="fk-header__btn-login" @click="login">
+        <Button link color="primary" size="small" class="fk-header__btn-login" :href="registrationLink">
           {{ navExtraItems[2].label }}
         </Button>
         <!-- shop button -->
@@ -111,6 +114,10 @@
       wrongInput: {
         type: Boolean,
         default: false
+      },
+      registrationLink: {
+        type: String,
+        default: ''
       }
     },
     data() {

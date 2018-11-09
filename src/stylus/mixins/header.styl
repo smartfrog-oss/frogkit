@@ -19,7 +19,7 @@ $visibleNavItems = 4
 
 // helpers
 mobile-order(n)
-  @media only screen and (max-width: $bp-sm - 1)
+  @media only screen and (max-width: $under-sm)
     order: n
 
 mobile-only()
@@ -27,7 +27,11 @@ mobile-only()
     display: none !important
 
 desktop-only()
-  @media only screen and (max-width: $bp-sm - 1)
+  @media only screen and (max-width: $under-sm)
+    display: none !important
+
+medium-only()
+  @media only screen and (min-width: $bp-lg), (max-width: $under-sm) //or (max-width: $under-sm))
     display: none !important
 
 // container
@@ -38,7 +42,7 @@ containerResponsive()
   flex-wrap: wrap
   align-items: center
   min-width 320px
-  @media only screen and (max-width: $bp-sm - 1)
+  @media only screen and (max-width: $under-sm)
     justify-content space-between
   @media only screen and (min-width: $bp-sm)
     flex: none
@@ -59,7 +63,7 @@ logo()
   height: 34px
   img
     min-width: 175px
-  @media only screen and (max-width: $bp-sm - 1)
+  @media only screen and (max-width: $under-sm)
     margin: 12px 15px
   @media only screen and (min-width: $bp-md)
     width: 235px
@@ -90,7 +94,7 @@ nav-links-default()
 // mobile toggle navigation
 mobile-nav()
   mobile-order(4)
-  @media only screen and (max-width: $bp-sm - 1)
+  @media only screen and (max-width: $under-sm)
     width: 100%
     max-height: 0
     overflow: hidden
@@ -167,6 +171,9 @@ login-form()
   display: none
   margin-left: auto
   margin-right: 10px
+  &__login
+    top-btn()
+    margin-left: 9px
   &__field
     padding-left: 10px
     max-width: 160px
@@ -186,6 +193,7 @@ login-form()
       width: 150px
     &[type="password"]
       width: 120px
+
   @media only screen and (min-width: $bp-lg)
     display: flex
 
@@ -206,7 +214,7 @@ header-mixin()
     toggle-nav-icon()
   &__btn-login
     top-btn()
-    desktop-only()
+    medium-only()
     margin-right: 9px
   &__btn-shop
     top-btn()

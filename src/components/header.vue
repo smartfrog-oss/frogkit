@@ -11,7 +11,7 @@
     <div class="fk-header__container">
       <!-- logo -->
       <h1 class="fk-header__logo">
-        <a :href="logoUrl"><img src="../assets/logo.svg" /></a>
+        <a :href="logoUrl" aria-label="home"><img src="../assets/logo.svg" alt="smartfrog-logo" /></a>
       </h1>
       <!-- burger menu icon -->
       <span class="fk-header__toggle" @click="mobileNavOpen = !mobileNavOpen">
@@ -42,28 +42,28 @@
           @change="countryChange" />
         <form class="fk-header__form" @submit.prevent="login">
            <div class="fk-header__form__field">
-              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder"></Input>
-              <a :href="formItems.registerUrl">{{ formItems.registerLabel }}</a>
+              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder" :aria-label="formItems.emailPlaceholder"></Input>
+              <a :href="formItems.registerUrl" :aria-label="formItems.registerLabel">{{ formItems.registerLabel }}</a>
             </div>
              <div class="fk-header__form__field">
-                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder"></Input>
-                <a :href="formItems.retriveUrl">{{ formItems.retriveLabel }}</a>
+                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder" :aria-label="formItems.passwordPlaceholder"></Input>
+                <a :href="formItems.retriveUrl" :aria-label="formItems.retriveLabel">{{ formItems.retriveLabel }}</a>
             </div>
             <Button type="submit" color="primary" size="small" class="fk-header__form__login">
               {{ navExtraItems[2].label }}
             </Button>
         </form>
         <!-- login button -->
-        <Button link color="primary" size="small" class="fk-header__btn-login" :href="registrationLink">
+        <Button link color="primary" size="small" class="fk-header__btn-login" :href="registrationLink" :aria-label="navExtraItems[2].label">
           {{ navExtraItems[2].label }}
         </Button>
         <!-- shop button -->
-        <Button link color="secondary" size="small" class="fk-header__btn-shop" :href="navExtraItems[1].url">
+        <Button link color="secondary" size="small" class="fk-header__btn-shop" :href="navExtraItems[1].url" :aria-label="navExtraItems[1].label">
           {{ navExtraItems[1].label }}
         </Button>
         <!-- cart button -->
-        <Button link color="secondary" size="small" class="fk-header__btn-cart" :href="navExtraItems[0].url">
-          <Icon icon="basket" />
+        <Button link color="secondary" size="small" class="fk-header__btn-cart" :href="navExtraItems[0].url" aria-label="cart">
+          <Icon icon="basket" alt="cart"/>
           <span v-if="cartCounter > 0" class="fk-header__btn-cart__counter">{{ cartCounter }}</span>
         </Button>
     </Flex>

@@ -15,7 +15,7 @@
       class="fk-countries__toggle"
       :class="{ 'fk-countries__toggle--on': toggleDropdown }"
       @click="toggleDropdown = !toggleOn">
-        <img :src="flagSrc(selectedCountry.countryCode)">
+        <img :src="flagSrc(selectedCountry.countryCode)" :alt="selectedCountry.displayName">
         <p>{{ selectedCountry.displayName }}</p>
         <Icon icon="angle-down" />
     </Flex>
@@ -28,7 +28,7 @@
         v-for="country in prefferedCountries"
         :key="country.countryCode"
         @click="updateCountry(country.countryCode)">
-          <img :src="flagSrc(country.countryCode)">
+          <img :src="flagSrc(country.countryCode)" :alt="country.displayName">
           <p>{{ country.displayName }}</p>
       </Flex>
       <!-- select list -->

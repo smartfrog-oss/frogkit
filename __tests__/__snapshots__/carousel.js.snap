@@ -3,11 +3,11 @@
 exports[`Carousel component Should render component and match snapshot 1`] = `
 <section class="fk-carousel">
     <swipeable>
-        <div class="fk-carousel__track"><img src="https://unsplash.it/320?random&amp;0" draggable="false" class="fk-carousel__slide"><img src="https://unsplash.it/320?random&amp;1" draggable="false" class="fk-carousel__slide"><img src="https://unsplash.it/320?random&amp;2" draggable="false"
-                class="fk-carousel__slide"></div>
+        <div class="fk-carousel__track"><img src="https://unsplash.it/320?random&amp;0" draggable="false" alt="-0" class="fk-carousel__slide"><img src="https://unsplash.it/320?random&amp;1" draggable="false" alt="-1" class="fk-carousel__slide"><img src="https://unsplash.it/320?random&amp;2"
+                draggable="false" alt="-2" class="fk-carousel__slide"></div>
     </swipeable>
     <div class="fk-carousel__indicators"><label class="fk-carousel__indicator"></label><label class="fk-carousel__indicator fk-carousel__indicator--active"></label><label class="fk-carousel__indicator"></label></div>
-    <flex justify="space-evenly" class="fk-carousel__previews"><img src="https://unsplash.it/320?random&amp;0" draggable="false" class="fk-carousel__preview"><img src="https://unsplash.it/320?random&amp;1" draggable="false" class="fk-carousel__preview fk-carousel__preview--active"><img src="https://unsplash.it/320?random&amp;2"
-            draggable="false" class="fk-carousel__preview"></flex>
+    <flex justify="space-evenly" class="fk-carousel__previews"><img alt="-0" src="https://unsplash.it/320?random&amp;0" draggable="false" class="fk-carousel__preview"><img alt="-1" src="https://unsplash.it/320?random&amp;1" draggable="false" class="fk-carousel__preview fk-carousel__preview--active"><img alt="-2"
+            src="https://unsplash.it/320?random&amp;2" draggable="false" class="fk-carousel__preview"></flex>
 </section>
 `;

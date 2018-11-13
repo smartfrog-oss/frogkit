@@ -7,8 +7,8 @@
 
 <template>
   <section class="fk-responsive-input">
-    <Input-Number class="fk-responsive-input__input" :min="min" :max="max" :size="size" :value="value" @input="handleInput"/>
-    <Select :class="selectClass" :options="options" :value="value" @input="handleInput" />
+    <Input-Number class="fk-responsive-input__input" :min="min" :max="max" :size="size" :value="value" @input="handleInput" :aria-label="ariaLabel"/>
+    <Select :class="selectClass" :options="options" :value="value" @input="handleInput" :aria-label="ariaLabel" />
   </section>
 </template>
 
@@ -43,6 +43,10 @@
       size: {
         type: String,
         default: 'small'
+      },
+      ariaLabel: {
+        type: String,
+        default: ''
       }
     },
     methods: {

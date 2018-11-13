@@ -7,14 +7,14 @@
 
 <template>
   <Flex class="fk-number-input">
-    <Button color="secondary" :disabled="value <= min" :class="buttonClass" @click="decrease">
-      <Icon icon="minus" :size="size"/> 
+    <Button color="secondary" :disabled="value <= min" :class="buttonClass" aria-label="decrease" @click="decrease">
+      <Icon icon="minus" :size="size" alt="minus"/> 
     </Button>
     <!-- -->
-    <Input type="number" :value="value" :class="inputClass" @input="handleChange" />
+    <Input type="number" :value="value" :class="inputClass" @input="handleChange" :aria-label="ariaLabel" />
     <!-- -->
-    <Button color="secondary" :disabled="value >= max" :class="buttonClass" @click="increase" >
-      <Icon icon="plus" :size="size"/> 
+    <Button color="secondary" :disabled="value >= max" :class="buttonClass" aria-label="increase" @click="increase" >
+      <Icon icon="plus" :size="size" alt="plus"/> 
     </Button>
   </Flex>
 </template>
@@ -38,6 +38,10 @@
       size: {
         type: String,
         default: 'small'
+      },
+      ariaLabel: {
+        type: String,
+        default: ''
       }
     },
     computed: {

@@ -11,7 +11,7 @@
 
     <Swipeable @swipeLeft="moveTo(selected-1)"  @swipeRight="moveTo(selected+1)" @swiping="swiping" @swipeEnd="moveTo(selected)">
       <div class="fk-carousel__track" :style="styles">
-        <img v-for="src,i in slides" :key="i" class="fk-carousel__slide" :src="src" draggable="false"></img>
+        <img v-for="src,i in slides" :key="i" class="fk-carousel__slide" :src="src" draggable="false" :alt="alt + '-' + i"></img>
       </div>
     </Swipeable>
 
@@ -20,7 +20,7 @@
     </div>
 
     <Flex class="fk-carousel__previews" justify="space-evenly">
-      <img v-for="src,i in slides" :key="i" class="fk-carousel__preview" :class="{'fk-carousel__preview--active': i === selected}" :src="src" @click="moveTo(i)" draggable="false"></img>
+      <img v-for="src,i in slides" :key="i" class="fk-carousel__preview" :class="{'fk-carousel__preview--active': i === selected}" :alt="alt + '-' + i" :src="src" @click="moveTo(i)" draggable="false"></img>
     </Flex>
 
   </section>
@@ -41,6 +41,10 @@
       loop: {
         type: Boolean,
         default: false
+      },
+      alt: {
+        type: String,
+        default: ''
       }
     },
     data() {

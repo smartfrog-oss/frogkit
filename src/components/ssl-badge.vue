@@ -6,7 +6,7 @@
 
 <template>
   <Flex align="center" class="fk-ssl-badge">
-      <img class="fk-ssl-badge__img" :class="{'fk-ssl-badge__img--small' : !!small}" src="../assets/images/ssl.png" />
+      <img class="fk-ssl-badge__img" :class="{'fk-ssl-badge__img--small' : !!small}" src="../assets/images/ssl.png" alt="encryption" />
       <div class="fk-ssl-badge__text" :class="{'fk-ssl-badge__text--small' : !!small}">{{text}}<slot></slot></div>
   </Flex>
 </template>

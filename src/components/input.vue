@@ -52,6 +52,10 @@
       requireValidation: {
         type: Boolean,
         default: false
+      },
+      blackList: {
+        type: Array,
+        default: () => []
       }
     },
     computed: {

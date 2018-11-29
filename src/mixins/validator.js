@@ -61,7 +61,7 @@ export default function validator(model = 'value') {
           return errors
         }
 
-        if (this.blackList && this.blackList.length) errors.blackListed = this.blackList.some(elt => value.toLowerCase().includes(elt.toLowerCase()))
+        if (this.blackList && this.blackList.length) errors.blackListed = this.blackList.some(elt => value.match(elt))
 
         if (this.required || (this.requireValidation && value) || force) {
           errors.required = typeof value === 'string' ? !value.length : !value

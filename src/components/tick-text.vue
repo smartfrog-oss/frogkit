@@ -8,7 +8,7 @@
 <section :class="['fk-tick-text', getClasses]">
   <Flex align="top" class="fk-tick-text__container">
     <Icon class="fk-tick-text__icon" icon="checkmark" :color="color" />
-    <Flex column>
+    <Flex column grow>
       <div :class="textClass" v-html="placeholder"></div>
       <slot></slot>
     </Flex>

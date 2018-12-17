@@ -1,8 +1,9 @@
 social-icon-mixin()
     display inline-block
-    width: 40px
-    height: @width
-    margin-right 4px
+    // to prevent cutting the edges of icons
+    width: 44px
+    height: 40px
+    padding-right 4px
     background: url('../assets/social_links.svg') no-repeat
     background-position: -100%
     background-size: auto @height

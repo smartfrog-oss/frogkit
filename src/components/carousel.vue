@@ -20,7 +20,7 @@
     </div>
 
     <Flex class="fk-carousel__previews" justify="space-evenly">
-      <img v-for="src,i in slides" :key="i" class="fk-carousel__preview" :class="{'fk-carousel__preview--active': i === selected}" :alt="alt + '-' + i" :src="src" @click="moveTo(i)" draggable="false"></img>
+      <img v-for="src,i in slides" :key="i" class="fk-carousel__preview" :class="{'fk-carousel__preview--active': i === selected}" :alt="alt + ' ' + i" :src="src" @click="moveTo(i)" draggable="false"></img>
     </Flex>
 
   </section>

@@ -10,7 +10,7 @@ const stories = storiesOf('Input', module)
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template:
   `<div>
-    <Input v-model="inputValue" :type="inputType" :size="size" :cutSide="cutSide" :block="block" :placeholder="placeholderText" :disabled="disabled" :required="required"></Input>
+    <Input v-model="inputValue" :type="inputType" :size="size" :blackList="[blackList]" :cutSide="cutSide" :block="block" :placeholder="placeholderText" :disabled="disabled" :required="required"></Input>
     <h1 class="demo-title">Value: {{inputValue}}</h1>
   </div>`,
   data() {
@@ -22,7 +22,8 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
       disabled: boolean('Disabled', false),
       block: boolean('Block', false),
       required: boolean('Required', false),
-      placeholderText: text('Placeholder', 'Username')
+      placeholderText: text('Placeholder', 'Username'),
+      blackList: text('blacklist', 'ta')
     }
   }
 }), Input)

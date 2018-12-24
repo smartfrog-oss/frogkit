@@ -14,7 +14,7 @@
         <div class="fk-app-header__container">
           <!-- logo -->
           <h1 class="fk-app-header__logo" pid="header_button_home">
-            <a :href="logoUrl">
+            <a :href="logoUrl" aria-label="app">
               <Icon icon="logo-small" />
             </a>
           </h1>
@@ -22,8 +22,8 @@
           <nav class="fk-app-header__nav">
             <!-- all cameras -->
             <div class="fk-app-header__cam" pid="header_button_all_cameras">
-              <a v-if="navigations[0]" :href="navigations[0].url">
-                <Icon icon="camera" /> {{ navigations[0].label }}</a>
+              <a v-if="navigations[0]" :href="navigations[0].url" :aria-label="navigations[0].label">
+                <Icon icon="camera" :alt="navigations[0].label" /> {{ navigations[0].label }}</a>
               <div class="fk-app-header__cam__nav">
                 <!-- <ul>
                 <li>
@@ -45,10 +45,10 @@
               </div>
             </div>
             <!-- my account -->
-            <a v-if="navigations[1]" :href="navigations[1].url" class="fk-app-header__account" pid="header_button_my_account">
-              <Icon icon="account" /> {{ navigations[1].label }}</a>
+            <a v-if="navigations[1]" :href="navigations[1].url" class="fk-app-header__account" pid="header_button_my_account" :aria-label="navigations[1].label" >
+              <Icon icon="account" :alt="navigations[1].label"/> {{ navigations[1].label }}</a>
             <!-- shop button -->
-            <Button v-if="navigations[2]" link color="secondary" size="small" class="fk-app-header__btn-shop" :href="navigations[2].url" pid="header_button_shop">
+            <Button v-if="navigations[2]" link color="secondary" size="small" class="fk-app-header__btn-shop" :href="navigations[2].url" pid="header_button_shop" :aria-label="navigations[2].label">
               {{ navigations[2].label }}
             </Button>
             <!-- current user -->
@@ -57,7 +57,7 @@
             </div>
             <!-- logout -->
             <div v-if="logoutlabel" class="fk-app-header__logout" @click="logout()">
-              <Icon icon="angle-down" /> {{ logoutlabel }}
+              <Icon icon="angle-down" :alt="logoutlabel" /> {{ logoutlabel }}
             </div>
             <!-- language selector -->
             <div v-if="activeLang" class="fk-app-header__lang" :class="{ 'fk-app-header__lang--on': toggleLangList}" @click="toggleDropdown">

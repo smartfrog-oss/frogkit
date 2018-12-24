@@ -91,6 +91,10 @@ input-mixin()
   &:disabled
     cursor: not-allowed
     set-color('disabled')
+
+    /* Override webkit font color change */
+    -webkit-text-fill-color:  $colors-input.default.label
+    -webkit-opacity: 1
   &&--block
     width: 100%
     display: block

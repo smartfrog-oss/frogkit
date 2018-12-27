@@ -85,10 +85,10 @@
     methods: {
       flagSrc(code) {
         try {
-          return require(/* webpackChunkName:  "[request]-flag" */ `../assets/flags/${code}.png`)
+          return require(`../assets/flags/${code}.png`)
 
         } catch (e) {
-          return require(/* webpackChunkName:  "unknown-flag" */`../assets/flags/_unknown.png`)
+          return require(`../assets/flags/_unknown.png`)
         }
       },
       getCountry(code) {

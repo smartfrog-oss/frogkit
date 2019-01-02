@@ -49,7 +49,7 @@
             <div>
               <h4 v-if="socialItems.headline">{{ socialItems.headline }}</h4>
               <div class="fk-footer__social__icons">
-                  <SocialIcon v-for="icon in socialItems.icons" :href="icon.url" :class="icon.name" :label="icon.label" :key="icon.name" />
+                  <SocialIcon v-for="icon in socialItems.icons" :href="icon.url" :name="icon.name"  :key="icon.name" />
               </div>
             </div>
           </section>

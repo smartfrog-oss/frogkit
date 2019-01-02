@@ -3,10 +3,9 @@ import Vue from 'vue'
 import Carousel from '@/components/carousel'
 
 const propsData = {
-  slides: Array.from({ length: 3 }).map((_, i) => `https://unsplash.it/320?random&${i}`),
+  slides: Array.from({ length: 3 }).map((_, i) => ({src: `https://unsplash.it/320?random&${i}`, description: 'smartfrog cam'})),
   loop: true,
-  active: 1,
-  alt: 'smartfrog cam'
+  active: 1  
 }
 
 describe('Carousel component', () => {

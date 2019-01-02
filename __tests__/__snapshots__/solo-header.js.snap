@@ -3,7 +3,7 @@
 exports[`Soloheader component should render component and match snapshot 1`] = `
 <header class="solo-header">
     <div class="solo-header__container">
-        <h1 class="solo-header__container__logo"><a aria-label="home"><img src="../assets/logo.svg" alt="smartfrog-logo"></a></h1>
+        <h1 class="solo-header__container__logo"><a aria-label="home"><img src="../assets/logo.svg" alt="smartfrog logo"></a></h1>
     </div>
 </header>
 `;

@@ -6,6 +6,7 @@ const propsData = {
   slides: Array.from({ length: 3 }).map((_, i) => `https://unsplash.it/320?random&${i}`),
   loop: true,
   active: 1,
+  alt: 'smartfrog cam'
 }
 
 describe('Carousel component', () => {

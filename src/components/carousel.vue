@@ -41,10 +41,6 @@
       loop: {
         type: Boolean,
         default: false
-      },
-      alt: {
-        type: String,
-        default: ''
       }
     },
     data() {

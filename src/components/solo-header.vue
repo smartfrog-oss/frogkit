@@ -10,7 +10,7 @@
   <header class="solo-header">
     <div class="solo-header__container">
       <h1 class="solo-header__container__logo">
-        <a :href="props.logoUrl" aria-label="home"><img src="../assets/logo.svg" alt="smartfrog logo" /></a>
+        <a :href="props.logoUrl"><img src="../assets/logo.svg" /></a>
       </h1>
     </div>
   </header>

@@ -11,7 +11,7 @@
       <Icon icon="minus" :size="size"/> 
     </Button>
     <!-- -->
-    <Input type="number" :value="value" :class="inputClass" @input="handleChange" />
+    <Input type="number" :value="value" :class="inputClass" @input="handleChange" :aria-label="ariaLabel" />
     <!-- -->
     <Button color="secondary" :disabled="value >= max" :class="buttonClass" @click="increase" >
       <Icon icon="plus" :size="size"/> 
@@ -38,6 +38,10 @@
       size: {
         type: String,
         default: 'small'
+      },
+      ariaLabel: {
+        type: String,
+        default: ''
       }
     },
     computed: {

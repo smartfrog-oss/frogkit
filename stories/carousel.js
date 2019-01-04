@@ -30,7 +30,7 @@ stories.addCodeExampleStory('kitchen sink', () => ({
   },
   computed:{
     slides() {
-      return Array.from({length: this.length}).map((_,i) => `https://unsplash.it/320?random&${i}`)
+      return Array.from({length: this.length}).map((_,i) => ({file: `https://unsplash.it/320?random&${i}`}) )
     }
   }
 }), Carousel)
@@ -47,7 +47,7 @@ stories.addCodeExampleStory('Product page', () => ({
   `,
   data() {
     return {
-      slides: Array.from({length: 3}).map((_,i) => `https://s3-eu-west-1.amazonaws.com/cdn.smartfrog.com/design/shop/camera_picts/sf_cam${i+1}%402x.jpg`)
+      slides: Array.from({length: 3}).map((_,i) => ({file: `https://s3-eu-west-1.amazonaws.com/cdn.smartfrog.com/design/shop/camera_picts/sf_cam${i+1}%402x.jpg`}))
     }
   },
 }), Carousel)

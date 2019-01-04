@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Carousel from '@/components/carousel'
 
 const propsData = {
-  slides: Array.from({ length: 3 }).map((_, i) => ({src: `https://unsplash.it/320?random&${i}`, description: 'smartfrog cam'})),
+  slides: Array.from({ length: 3 }).map((_, i) => ({file: `https://unsplash.it/320?random&${i}`, description: 'smartfrog cam'})),
   loop: true,
   active: 1  
 }

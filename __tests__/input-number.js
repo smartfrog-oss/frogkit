@@ -10,33 +10,33 @@ describe('Input component', () => {
   })
 
   it('should render small input', () => {
-    const wrapper = mount(InputNumber, { propsData: { size : 'small' } })
+    const wrapper = mount(InputNumber, { propsData: { size : 'small', ariaLabel: 'quantity' } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should render big input', () => {
-    const wrapper = mount(InputNumber, { propsData: { size : 'big' } })
+    const wrapper = mount(InputNumber, { propsData: { size : 'big', ariaLabel: 'quantity' } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should disable decrease button', () => {
-    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 1, max: 5 } })
+    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 1, max: 5, ariaLabel: 'quantity' } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should disable increase button', () => {
-    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 5, max: 5 } })
+    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 5, max: 5, ariaLabel: 'quantity' } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should decrease input', () => {
-    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 3, max: 5 } })
+    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 3, max: 5, ariaLabel: 'quantity' } })
     wrapper.findAll('button').at(0).trigger('click')
     expect(wrapper.emitted().input[0]).toEqual([2])
   })
 
   it('should increase input', () => {
-    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 3, max: 5 } })
+    const wrapper = mount(InputNumber, { propsData: { min : 1, value: 3, max: 5, ariaLabel: 'quantity' } })
     wrapper.findAll('button').at(1).trigger('click')
     expect(wrapper.emitted().input[0]).toEqual([4])
   })

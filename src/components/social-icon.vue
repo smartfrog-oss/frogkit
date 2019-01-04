@@ -7,7 +7,7 @@
 </style>
 
 <template>
-  <a :href="url" class="fk-social-icon" :class="name" target="_blank" rel="noopener">{{ label }}</a>
+  <a :href="url" class="fk-social-icon" :class="name" target="_blank" :aria-label="name" rel="noopener">{{ label }}</a>
 </template>
 
 <script>

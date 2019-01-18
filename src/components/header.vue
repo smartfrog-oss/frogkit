@@ -42,14 +42,14 @@
           @change="countryChange" />
         <form class="fk-header__form" @submit.prevent="login">
            <div class="fk-header__form__field">
-              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder" :aria-label="formItems.emailPlaceholder"></Input>
+              <Input v-model="email" name="email" type="email" size="small" :wrong="wrongInput" :placeholder="formItems.emailPlaceholder" :aria-label="formItems.emailPlaceholder" pid="emailaddress"></Input>
               <a :href="formItems.registerUrl" :aria-label="formItems.registerLabel">{{ formItems.registerLabel }}</a>
             </div>
              <div class="fk-header__form__field">
-                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder" :aria-label="formItems.passwordPlaceholder"></Input>
+                <Input v-model="password" name="password" type="password" size="small" :wrong="wrongInput" :placeholder="formItems.passwordPlaceholder" :aria-label="formItems.passwordPlaceholder" pid="password"></Input>
                 <a :href="formItems.retriveUrl" :aria-label="formItems.retriveLabel">{{ formItems.retriveLabel }}</a>
             </div>
-            <Button type="submit" color="primary" size="small" class="fk-header__form__login">
+            <Button type="submit" color="primary" size="small" class="fk-header__form__login" pid="loginbutton">
               {{ navExtraItems[2].label }}
             </Button>
         </form>

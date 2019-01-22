@@ -1,0 +1,30 @@
+.facebook {
+	background: url("social-icons.svg") 0 0 no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.gplus {
+	background: url("social-icons.svg") 25% 25% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.instagram {
+	background: url("social-icons.svg") 50% 50% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.twitter {
+	background: url("social-icons.svg") 75% 75% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.youtube {
+	background: url("social-icons.svg") 100% 100% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+

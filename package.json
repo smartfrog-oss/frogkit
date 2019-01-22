@@ -8,6 +8,7 @@
     "precommit": "prettier --config .prettierrc '{,!(node_modules)/**/}*.js' --write",
     "test": "jest",
     "icon": "rimraf src/components/icons/* && node build/svg-icon src/assets/icons src/components/icons",
+    "social-icon": "rimraf src/assets/sprite/* && cd src/assets/social && svg-sprite --config config.json base/*.svg && cd -",
     "release": "bash build/release.sh"
   },
   "author": "Mouafa Ahmed (https://github.com/mouafa)",

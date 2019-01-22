@@ -1,9 +1,9 @@
 <style lang="stylus">
-  @require '../stylus/mixins/social-icons'
+  @require '../assets/social/sprite/social-icons.css'
+  @require '../stylus/mixins/social-icons' 
 
   .fk-social-icon
     social-icon-mixin()
-
 </style>
 
 <template>

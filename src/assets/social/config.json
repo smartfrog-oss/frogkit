@@ -1,0 +1,26 @@
+{
+  "dest": "sprite",
+  "log": "info",
+  "shape": {
+    "dimension": {
+      "maxWidth": 40,
+      "maxHeight": 40
+    }
+  },
+  "mode": {
+    "css": {
+      "dest": ".",
+      "layout": "diagonal",
+      "prefix": ".%s",
+      "sprite": "social-icons",
+      "dimensions": false,
+      "render": {
+        "css": {
+          "dest": "social-icons.css"
+        }
+      },
+      "example": false,
+      "bust": false
+    }
+  }
+}

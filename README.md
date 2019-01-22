@@ -51,6 +51,12 @@ export default {
 2. run `yarn icon`
 the script will optimise the SVG and generate an icon component for it
 
+## social icons
+
+1. place a social icon SVG file inside `src/assets/social/base`
+
+2. run `yarn social-icon`
+the script will update the social icons sprite (image and css) adding the new one
 
 ## Contribution
 

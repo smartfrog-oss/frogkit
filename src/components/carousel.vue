@@ -11,7 +11,7 @@
 
     <Swipeable @swipeLeft="moveTo(selected-1)"  @swipeRight="moveTo(selected+1)" @swiping="swiping" @swipeEnd="moveTo(selected)">
       <div class="fk-carousel__track" :style="styles">
-        <img v-for="image,i in slides" :key="i" class="fk-carousel__slide" v-next-gen :src="image.file" :alt="image.description" draggable="false" ></img>
+        <img v-for="image,i in slides" :key="i" class="fk-carousel__slide" v-next-gen="webpSupported" :src="image.file" :alt="image.description" draggable="false" ></img>
       </div>
     </Swipeable>
 
@@ -20,7 +20,7 @@
     </div>
 
     <Flex class="fk-carousel__previews" justify="space-evenly">
-      <img v-for="image,i in slides" :key="i" class="fk-carousel__preview" v-next-gen
+      <img v-for="image,i in slides" :key="i" class="fk-carousel__preview" v-next-gen="webpSupported"
        :class="{'fk-carousel__preview--active': i === selected}" :src="image.file" :alt="image.description" @click="moveTo(i)" draggable="false"></img>
     </Flex>
 
@@ -58,10 +58,19 @@
         webpSupported: false
       }
     },
+    created () {
+      this.detectWebpSupport()
+    },
     mounted() {
       this.translate(this.active)
     },
     methods: {
+      detectWebpSupport () {
+        // Credits: https://codepen.io/branneman/pen/dxfDr
+        const webP = new Image()
+        webP.onload = webP.onerror = () => this.webpSupported = webP.height === 2
+        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
+      },
       moveTo(i) {
         if (Math.max(0, Math.min(this.max, i)) === i) {
           this.selected = i

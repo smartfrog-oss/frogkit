@@ -11,7 +11,7 @@
 
     <Swipeable @swipeLeft="moveTo(selected-1)"  @swipeRight="moveTo(selected+1)" @swiping="swiping" @swipeEnd="moveTo(selected)">
       <div class="fk-carousel__track" :style="styles">
-        <img v-for="image,i in slides" :key="i" class="fk-carousel__slide" :src="image.file" :alt="image.description" draggable="false" ></img>
+        <img v-for="image,i in slides" :key="i" class="fk-carousel__slide" v-next-gen :src="image.file" :alt="image.description" draggable="false" ></img>
       </div>
     </Swipeable>
 
@@ -20,13 +20,16 @@
     </div>
 
     <Flex class="fk-carousel__previews" justify="space-evenly">
-      <img v-for="image,i in slides" :key="i" class="fk-carousel__preview" :class="{'fk-carousel__preview--active': i === selected}" :src="image.file" :alt="image.description" @click="moveTo(i)" draggable="false"></img>
+      <img v-for="image,i in slides" :key="i" class="fk-carousel__preview" v-next-gen
+       :class="{'fk-carousel__preview--active': i === selected}" :src="image.file" :alt="image.description" @click="moveTo(i)" draggable="false"></img>
     </Flex>
 
   </section>
 </template>
 
 <script>
+  import nextGen from '../directives/nextGen'
+
   export default {
     name: 'Carousel',
     props: {
@@ -43,12 +46,16 @@
         default: false
       }
     },
+    directives: {
+      nextGen
+    },
     data() {
       return {
         selected: this.active,
         styles: {},
         max: this.slides.length - 1,
-        lastPosition: null
+        lastPosition: null,
+        webpSupported: false
       }
     },
     mounted() {

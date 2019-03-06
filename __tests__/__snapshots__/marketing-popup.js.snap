@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coupon Popup component should render component and match snapshot 1`] = `
+<flex justify="center" align="center" class="fk-dialogue v-enter fk-dialogue__animation-in">
+    <section class="fk-dialogue__frame">
+        <a class="fk-dialogue__close">
+            <icon icon="close-light" color="orange"></icon>
+        </a>
+        <div class="fk-marketing-popup">
+            <title color="primary" size="xl" class="fk-marketing-popup__title">Sorry!</title> <img src="../assets/geschenk.svg" class="fk-marketing-popup__img">
+            <p class="fk-marketing-popup__txt">Due to high demand, our expected delivery time is currently 8 - 12 business days.</p>
+            <p class="fk-marketing-popup__txt">Voucher: <span class="fk-marketing-popup__txt__code">Sorry19</span></p> <button size="big" block="true" color="secondary" link="" class="fk-marketing-popup__btn"><span>Continue</span> <icon icon="arrow-right"></icon></button> <span class="fk-marketing-popup__close">Later</span></div>
+    </section>
+</flex>
+`;

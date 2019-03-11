@@ -18,6 +18,10 @@
     "vue": "^2.5.2"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
     "@smartfrog/password": "^1.1.0",
     "@storybook/addon-actions": "3.2.16",
     "@storybook/addon-knobs": "3.2.16",
@@ -32,6 +36,7 @@
     "jest-serializer-vue": "0.2.0",
     "prettier": "1.7.4",
     "rimraf": "^2.6.2",
+    "semantic-release": "^15.13.3",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.1",
     "svgo": "1.0.2",

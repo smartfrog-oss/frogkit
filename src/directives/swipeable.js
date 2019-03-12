@@ -26,7 +26,6 @@ export default {
 
     function onTouchEnd(e) {
       const delta = getTouchPos(e) - startPos
-      // console.log('delta', delta, 'threshold', threshold)
       if (delta < -threshold) {
         vnode.context.$emit('swipeRight')
       } else if (delta > threshold) {

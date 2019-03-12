@@ -8,18 +8,18 @@
 <template>
   <Dialogue :visible="visible" @change="close">
     <div class="fk-coupon-popup">
-      <Title class="fk-coupon-popup__title" color="primary" size="xl">{{ config.title }}</Title>
-      <img :src="config.image" class="fk-coupon-popup__img" />
-      <p class="fk-coupon-popup__txt">{{ config.headline }}</p>
+      <Title v-if="config.title" class="fk-coupon-popup__title" color="primary" size="xl">{{ config.title }}</Title>
+      <img v-if="config.image" :src="config.image" class="fk-coupon-popup__img" />
+      <p v-if="config.headline" class="fk-coupon-popup__txt">{{ config.headline }}</p>
       <p class="fk-coupon-popup__txt">
-        {{ config.label }}
-        <span class="fk-coupon-popup__txt__code">{{ config.code }}</span>
+        <template v-if="config.label">{{ config.label }}</template>
+        <span v-if="config.code" class="fk-coupon-popup__txt__code">{{ config.code }}</span>
       </p>
-      <Button class="fk-coupon-popup__btn" size="big" :block="true" color="secondary" @click="proceed" link>
+      <Button v-if="config.accept" class="fk-coupon-popup__btn" size="big" :block="true" color="secondary" @click="proceed" link>
         <span>{{ config.accept }}</span>
         <Icon icon="arrow-right" />
       </Button>
-      <span class="fk-coupon-popup__close" @click="close">{{ config.reject }}</span>
+      <span v-if="config.reject" class="fk-coupon-popup__close" @click="close">{{ config.reject }}</span>
     </div>
   </Dialogue>
 </template>

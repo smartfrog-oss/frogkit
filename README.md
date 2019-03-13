@@ -90,4 +90,24 @@ yarn test
 
 8. Open a PR!
 
+## Semantic Realse
+We use semantic release now to control the version and to publish to npm registry. <br>
+According to the commit message we decide what the next version would be. <br>
+Please check the following table:
+| Commit message        | Update           |
+| ----------------------|:----------------:|
+| feat                  | **Major**        |
+| fix                    | **Minor**        |
+| docs                  | **Patch**        |
+| style                 | **Patch**        |
+| refactor              | **Minor**        |
+| perf                  | **Patch**        |
+| test                  | **Patch**        |
+| build                 | **Patch**        |
+| ci                    | **Patch**        |
+| chore                 | **Patch**        |
+| revert                | **Minor**        |
+
+
+
 **Happy Coding!**

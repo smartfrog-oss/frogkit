@@ -4,7 +4,7 @@ Smartfrog UI Components Library
 
 [![npm version](https://badge.fury.io/js/%40smartfrog%2Ffrogkit.svg)](https://badge.fury.io/js/%40smartfrog%2Ffrogkit)
 [![Build Status](https://api.travis-ci.org/smartfrog-oss/frogkit.svg?branch=development)](https://travis-ci.org/smartfrog-oss/frogkit#)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/smartfrog-oss/frogkit#semantic-release)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](#semantic-release)
 
 ![https://github.com/smartfrog-oss/frogkit](logo.png)
 

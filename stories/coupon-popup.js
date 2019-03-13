@@ -25,7 +25,7 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
       visible: boolean('Visible', true),
       config: {
         title: text('Title', 'Hiergeblieben!'),
-        image: select('Image', [require('@demo/popup/gift.svg'), require('@demo/popup/geschenk.svg')], require('@demo/popup/gift.svg')),
+        image: select('Image', [require('@demo/popup/gift.svg'), require('@demo/popup/geschenk.svg'), ''], require('@demo/popup/gift.svg')),
         headline: text('Headline', 'Smartfrog schenkt dir den ersten Monat!'),
         label: text('Voucher label', 'Gutscheincode:'),
         code: text('Voucher code', 'FREE1'),

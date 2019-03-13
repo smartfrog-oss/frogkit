@@ -10,7 +10,9 @@ exports[`Coupon Popup component should render component and match snapshot 1`] =
             <title color="primary" size="xl" class="fk-coupon-popup__title">Hiergeblieben!</title>
             <!---->
             <p class="fk-coupon-popup__txt">Smartfrog schenkt dir den ersten Monat!</p>
-            <p class="fk-coupon-popup__txt">Gutscheincode: <span class="fk-coupon-popup__txt__code">FREE1</span></p> <button size="big" block="true" color="secondary" link="" class="fk-coupon-popup__btn"><span>Jetzt einlösen</span> <icon icon="arrow-right"></icon></button> <span class="fk-coupon-popup__close">Jetzt nicht</span></div>
+            <p class="fk-coupon-popup__txt">
+                Gutscheincode:
+                <span class="fk-coupon-popup__txt__code">FREE1</span></p> <button size="big" block="true" color="secondary" link="" class="fk-coupon-popup__btn"><span>Jetzt einlösen</span> <icon icon="arrow-right"></icon></button> <span class="fk-coupon-popup__close">Jetzt nicht</span></div>
     </section>
 </flex>
 `;

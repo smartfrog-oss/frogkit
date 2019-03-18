@@ -4,7 +4,7 @@ Smartfrog UI Components Library
 
 [![npm version](https://badge.fury.io/js/%40smartfrog%2Ffrogkit.svg)](https://badge.fury.io/js/%40smartfrog%2Ffrogkit)
 [![Build Status](https://api.travis-ci.org/smartfrog-oss/frogkit.svg?branch=development)](https://travis-ci.org/smartfrog-oss/frogkit#)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/smartfrog-oss/frogkit)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](#semantic-release)
 
 ![https://github.com/smartfrog-oss/frogkit](logo.png)
 
@@ -89,5 +89,27 @@ yarn test
 ```
 
 8. Open a PR!
+
+## Semantic Release
+
+We use semantic release now to control the version and to publish to npm registry. <br>
+According to the commit message we decide what the next version would be. <br>
+Please check the following table: <br>
+
+| Commit message |   Update  |
+|----------------|:---------:|
+| feat           | **Major** |
+| fix            | **Minor** |
+| docs           | **Patch** |
+| style          | **Patch** |
+| refactor       | **Minor** |
+| perf           | **Patch** |
+| test           | **Patch** |
+| build          | **Patch** |
+| ci             | **Patch** |
+| chore          | **Patch** |
+| revert         | **Minor** |
+
+
 
 **Happy Coding!**

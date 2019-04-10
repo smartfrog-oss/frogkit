@@ -2,28 +2,28 @@
 
 exports[`Input Tooltip component Should render component and match snapshot 1`] = `
 <section class="fk-input-tooltip">
-    <div><input type="password" class="fk-input"></div>
-    <div class="fk-input-tooltip__bubble" style="display: none;"><b class="fk-input-tooltip__title">Password must have:</b>
-        <ul>
-            <li class="fk-input-tooltip--valid">8 or more characters</li>
-            <li class="fk-input-tooltip--valid">Upper &amp; lowercase letters</li>
-            <li class="fk-input-tooltip--valid">At least one number</li>
-        </ul>
-        <!---->
-    </div>
+  <div><input type="password" class="fk-input"></div>
+  <div class="fk-input-tooltip__bubble" style="display: none;"><b class="fk-input-tooltip__title">Password must have:</b>
+    <ul>
+      <li class="fk-input-tooltip--valid">8 or more characters</li>
+      <li class="fk-input-tooltip--valid">Upper &amp; lowercase letters</li>
+      <li class="fk-input-tooltip--valid">At least one number</li>
+    </ul>
+    <!---->
+  </div>
 </section>
 `;
 
 exports[`Input Tooltip should validate input Should render component and match snapshot 1`] = `
 <section class="fk-input-tooltip">
-    <div><input type="password" class="fk-input"></div>
-    <div class="fk-input-tooltip__bubble"><b class="fk-input-tooltip__title">Password must have:</b>
-        <ul>
-            <li class="fk-input-tooltip--valid">8 or more characters</li>
-            <li class="fk-input-tooltip--valid">Upper &amp; lowercase letters</li>
-            <li class="fk-input-tooltip--valid">At least one number</li>
-        </ul>
-        <!---->
-    </div>
+  <div><input type="password" class="fk-input"></div>
+  <div class="fk-input-tooltip__bubble"><b class="fk-input-tooltip__title">Password must have:</b>
+    <ul>
+      <li class="fk-input-tooltip--valid">8 or more characters</li>
+      <li class="fk-input-tooltip--valid">Upper &amp; lowercase letters</li>
+      <li class="fk-input-tooltip--valid">At least one number</li>
+    </ul>
+    <!---->
+  </div>
 </section>
 `;

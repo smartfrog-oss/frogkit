@@ -2,8 +2,8 @@
 
 exports[`Logged-in Header component Should render component and match snapshot 1`] = `
 <flex>
-    <grid>
-        <col xs12="">
-    </grid>
+  <grid>
+    <col xs12="">
+  </grid>
 </flex>
 `;

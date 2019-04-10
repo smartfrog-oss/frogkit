@@ -8,11 +8,15 @@ const stories = storiesOf('Stepper', module)
 
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template: `<Stepper :count="count" :active="active" :big="big" />`,
-  data() {
-    return {
-      count: number('Count', 3, { min: 1, max: 12, step: 1, }),
-      active: number('Active', 2, { min: 1, max: 12, step: 1, }),
-      big: boolean('Big', false)
+  props: {
+    count: {
+      default: number('Count', 3, { min: 1, max: 12, step: 1, })
+    },
+    active: {
+      default: number('Active', 2, { min: 1, max: 12, step: 1, })
+    },
+    big: {
+      default: boolean('Big', false)
     }
   }
 }))

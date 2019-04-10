@@ -44,8 +44,6 @@ stories.addCodeExampleStory(
     data() {
       return {
         inputs: Array.from({ length: 8 }),
-        disabled: boolean('Disabled', false),
-        wrong: boolean('Wrong', false),
         options: [{ value: 'Mr', label: 'Mr' }, { value: 'Mrs', label: 'Mrs' }],
         isValid: null,
         conditions: {
@@ -60,6 +58,14 @@ stories.addCodeExampleStory(
         },
         title: 'Password must have:',
       }
+    },
+    props: {
+      disabled: {
+        default: boolean('Disabled', false)
+      },
+      wrong: {
+        default: boolean('Wrong', false)
+      },
     },
     methods: {
       submit() {
@@ -100,9 +106,13 @@ stories.addCodeExampleStory(
     data() {
       return {
         inputs: Array.from({ length: 4 }),
-        disabled: boolean('Disabled', false),
         isValid: null,
       }
+    },
+    props: {
+      disabled: {
+        default: boolean('Disabled', false)
+      },
     },
     methods: {
       submit() {

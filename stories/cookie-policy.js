@@ -6,9 +6,9 @@ const stories = storiesOf('Cookie Policy', module)
 
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template: `<CookiePolicy :lang="lang" />`,
-  data () {
-    return {
-      lang: select('Language', ['de', 'en'], 'de')
+  props:{
+    lang: {
+      default: select('Language', ['de', 'en'], 'de')
     }
   }
 }), CookiePolicy)

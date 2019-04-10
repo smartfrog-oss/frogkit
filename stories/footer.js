@@ -69,11 +69,15 @@ const socialItems = {
 
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template: `<Footer :navItems="navItems" :appStoreItems="appStoreItems" :socialItems="socialItems" />`,
-  data () {
-    return {
-      navItems: navItems,
-      appStoreItems: appStoreItems,
-      socialItems: socialItems
+  props: {
+    navItems: {
+      default: navItems
+    },
+    appStoreItems: {
+      default: appStoreItems
+    },
+    socialItems: {
+      default: socialItems
     }
   }
 }), Footer)

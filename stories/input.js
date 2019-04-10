@@ -13,17 +13,33 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
     <Input v-model="inputValue" :type="inputType" :size="size" :blackList="[blackList]" :cutSide="cutSide" :block="block" :placeholder="placeholderText" :disabled="disabled" :required="required"></Input>
     <h1 class="demo-title">Value: {{inputValue}}</h1>
   </div>`,
-  data() {
-    return {
-      inputValue: text('Text', 'tada'),
-      inputType: select('Input Type', ['text', 'email', 'phone', 'password', 'ukZip'], 'text'),
-      size: select('Size', ['normal', 'small'], 'normal'),
-      cutSide: select('Cut border', ['default', 'left', 'right'], 'default'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Block', false),
-      required: boolean('Required', false),
-      placeholderText: text('Placeholder', 'Username'),
-      blackList: text('blacklist', 'ta')
+  props: {
+    inputValue: {
+      default: text('Text', 'tada')
+    },
+    inputType: {
+      default: select('Input Type', ['text', 'email', 'phone', 'password', 'ukZip'], 'text')
+    },
+    size: {
+      default: select('Size', ['normal', 'small'], 'normal')
+    },
+    cutSide: {
+      default: select('Cut border', ['default', 'left', 'right'], 'default')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Block', false)
+    },
+    required: {
+      default: boolean('Required', false)
+    },
+    placeholderText: {
+      default: text('Placeholder', 'Username')
+    },
+    blackList: {
+      default: text('blacklist', 'ta')
     }
   }
 }), Input)
@@ -36,12 +52,26 @@ stories.addCodeExampleStory('Type Password', () => ({
   data() {
     return {
       inputValue: '',
-      size: select('Size', ['normal', 'small'], 'normal'),
-      cutSide: select('Cut border', ['default', 'left', 'right'], 'default'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Block', false),
-      required: boolean('Required', false),
-      placeholderText: text('Placeholder', 'Password')
+    }
+  },
+  props: {
+    size: {
+      default: select('Size', ['normal', 'small'], 'normal')
+    },
+    cutSide: {
+      default: select('Cut border', ['default', 'left', 'right'], 'default')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Block', false)
+    },
+    required: {
+      default: boolean('Required', false)
+    },
+    placeholderText: {
+      default: text('Placeholder', 'Password')
     }
   }
 }))
@@ -53,13 +83,27 @@ stories.addCodeExampleStory('Type Phone Number', () => ({
   </div>`,
   data() {
     return {
-      inputValue: '',
-      size: select('Size', ['normal', 'small'], 'normal'),
-      cutSide: select('Cut border', ['default', 'left', 'right'], 'default'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Block', false),
-      required: boolean('Required', false),
-      placeholderText: text('Placeholder', 'Phone Number')
+      inputValue: ''
+    }
+  },
+  props: {
+    size: {
+      default: select('Size', ['normal', 'small'], 'normal')
+    },
+    cutSide: {
+      default: select('Cut border', ['default', 'left', 'right'], 'default')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Block', false)
+    },
+    required: {
+      default: boolean('Required', false)
+    },
+    placeholderText: {
+      default: text('Placeholder', 'Phone Number')
     }
   }
 }))
@@ -71,13 +115,27 @@ stories.addCodeExampleStory('Type Email', () => ({
   </div>`,
   data() {
     return {
-      inputValue: '',
-      size: select('Size', ['normal', 'small'], 'normal'),
-      cutSide: select('Cut border', ['default', 'left', 'right'], 'default'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Block', false),
-      required: boolean('Required', false),
-      placeholderText: text('Placeholder', 'Email')
+      inputValue: ''
+    }
+  },
+  props: {
+    size: {
+      default: select('Size', ['normal', 'small'], 'normal')
+    },
+    cutSide: {
+      default: select('Cut border', ['default', 'left', 'right'], 'default')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Block', false)
+    },
+    required: {
+      default: boolean('Required', false)
+    },
+    placeholderText: {
+      default: text('Placeholder', 'Email')
     }
   }
 }))

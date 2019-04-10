@@ -22,9 +22,15 @@ stories.addCodeExampleStory('kitchen sink', () => ({
   methods: { action: action('button-click') },
   data() {
     return {
-      icons: iconsList,
-      color: select('Color', ['', 'orange', 'blue', 'red', 'grey'], ''),
-      size: select('Size', ['default', 'big', 'small'], 'big'),
+      icons: iconsList
     }
   },
+  props: {
+    color: {
+      default: select('Color', ['', 'orange', 'blue', 'red', 'grey'], '')
+    },
+    size: {
+      default: select('Size', ['default', 'big', 'small'], 'big')
+    }
+  }
 }), Icon)

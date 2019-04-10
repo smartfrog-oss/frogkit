@@ -22,10 +22,12 @@ stories.addCodeExampleStory('kitchen sink', () => ({
                   </ul>
                 </DescriptionBlock>
             </Accordion>`,
-  data(){
-    return {
-      placeholder: text('placeholder', 'Lorem ipsum dolorem'),
-      open: boolean('Open', false)
-    }
+  props: {
+      placeholder:  {
+        default: text('placeholder', 'Lorem ipsum dolorem')
+      },
+      open: {
+        default: boolean('Open', false)
+      }
   }
 }), Accordion)

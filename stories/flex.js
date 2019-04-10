@@ -15,11 +15,15 @@ stories.addCodeExampleStory('kitchen Sink', () => ({
     </Flex>
   </Grid>
   `,
-  data(){
-    return {
-      column: boolean('Column', false),
-      justify: select('Justify', ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'], 'start'),
-      align: select('Align', ['start', 'center', 'end', 'stretch'], 'start')
+  props: {
+    column: {
+      default: boolean('Column', false)
+    },
+    justify: {
+      default: select('Justify', ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'], 'start')
+    },
+    align: {
+      default: select('Align', ['start', 'center', 'end', 'stretch'], 'start')
     }
   }
 }), Flex)
@@ -32,12 +36,18 @@ stories.addCodeExampleStory('Nested Flex', () => ({
     </Flex>
   </Grid>
   `,
-  data(){
-    return {
-      column: boolean('Column', false),
-      grow: boolean('Grow', false),
-      justify: select('Justify', ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'], 'start'),
-      align: select('Align', ['start', 'center', 'end', 'stretch'], 'start')
+  props: {
+    column: {
+      default: boolean('Column', false)
+    },
+    grow: {
+      default: boolean('Grow', false)
+    },
+    justify: {
+      default: select('Justify', ['start', 'center', 'end', 'space-around', 'space-between', 'space-evenly'], 'start')
+    },
+    align: {
+      default: select('Align', ['start', 'center', 'end', 'stretch'], 'start')
     }
   }
 }))

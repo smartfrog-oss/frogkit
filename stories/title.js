@@ -10,13 +10,21 @@ stories.add('kitchen sink', () => ({
   template: `<Title :size="size" :color="color" :weight="weight" :center="center">
               {{slot}}
             </Title>`,
-  data(){
-    return {
-      slot: text('Text', 'Lorem ipsum dolorem'),
-      size: select('Size', ['larger', 'xx-small', '100px', '8px', 'xl', 'lg', 'md', 'sm', 'xs'], 'md'),
-      color: select('Color', ['default', 'primary', 'light', 'secondary'], 'primary'),
-      weight: select('Weight', ['default', 'bold', 'slim']),
-      center: boolean('Center', false)
+  props: {
+    slot: {
+      default: text('Text', 'Lorem ipsum dolorem')
+    },
+    size: {
+      default: select('Size', ['larger', 'xx-small', '100px', '8px', 'xl', 'lg', 'md', 'sm', 'xs'], 'md')
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'light', 'secondary'], 'primary')
+    },
+    weight: {
+      default: select('Weight', ['default', 'bold', 'slim'])
+    },
+    center: {
+      default: boolean('Center', false)
     }
   }
 }), Title)
@@ -25,12 +33,18 @@ stories.add('Custom size (type number)', () => ({
   template: `<Title :size="size" :color="color" :weight="weight">
               {{slot}}
             </Title>`,
-  data(){
-    return {
-      slot: text('Text', 'Lorem ipsum dolorem'),
-      size: number('Size', 1),
-      color: select('Color', ['default', 'primary', 'light'], 'primary'),
-      weight: select('Weight', ['default', 'bold', 'slim'])
+  props: {
+    slot: {
+      default: text('Text', 'Lorem ipsum dolorem')
+    },
+    size: {
+      default: number('Size', 1)
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'light'], 'primary')
+    },
+    weight: {
+      default: select('Weight', ['default', 'bold', 'slim'])
     }
   }
 }))

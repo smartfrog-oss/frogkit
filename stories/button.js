@@ -16,19 +16,37 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
     {{slot}}
   </Button>`,
   methods: { action: action('button-click') },
-  data() {
-    return {
-      slot: text('Text', 'click me'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Full Width', false),
-      outline: boolean('Outline', false),
-      loading: boolean('Loading', false),
-      link: boolean('Link', false),
-      capitalize: boolean('Capitalize', false),
-      size: select('Size', ['small', 'normal', 'big'], 'normal'),
-      color: select('Color', ['default', 'primary', 'secondary'], 'default'),
-      cutSide: select('Cut border', ['', 'left', 'right'], '')
-    }
+  props: {
+      slot: {
+        default: text('Text', 'click me')
+      },
+      disabled: {
+        default: boolean('Disabled', false)
+      },
+      block: {
+        default: boolean('Full Width', false)
+      },
+      outline: {
+        default: boolean('Outline', false)
+      },
+      loading: {
+        default: boolean('Loading', false)
+      },
+      link: {
+        default: boolean('Link', false)
+      },
+      capitalize: {
+        default: boolean('Capitalize', false)
+      },
+      size: {
+        default: select('Size', ['small', 'normal', 'big'], 'normal')
+      },
+      color: {
+        default: select('Color', ['default', 'primary', 'secondary'], 'default')
+      },
+      cutSide: {
+        default: select('Cut border', ['', 'left', 'right'], '')
+      }
   }
 }), Button)
 
@@ -37,18 +55,36 @@ stories.addCodeExampleStory('Link as a button', () => ({
   template: `<Button link :disabled="disabled" :size="size" :block="block" :capitalize="capitalize" :loading="loading" :outline="outline" :cut-side="cutSide" :color="color" :href="href" target="_blank">
               {{slot}}
             </Button>`,
-  data(){
-    return {
-      slot: text('Text', 'Jetzt bestellen'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Full Width', false),
-      outline: boolean('Outline', false),
-      loading: boolean('Loading', false),
-      capitalize: boolean('Capitalize', false),
-      href: text('href', '//smartfrog.com'),
-      size: select('Size', ['small', 'normal', 'big'], 'normal'),
-      color: select('Color', ['default', 'primary', 'secondary'], 'primary'),
-      cutSide: select('Cut border', ['', 'left', 'right'], '')
+  props: {
+    slot: {
+      default: text('Text', 'Jetzt bestellen')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Full Width', false)
+    },
+    outline: {
+      default: boolean('Outline', false)
+    },
+    loading: {
+      default: boolean('Loading', false)
+    },
+    capitalize: {
+      default: boolean('Capitalize', false)
+    },
+    href: {
+      default: text('href', '//smartfrog.com')
+    },
+    size: {
+      default: select('Size', ['small', 'normal', 'big'], 'normal')
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'secondary'], 'primary')
+    },
+    cutSide: {
+      default: select('Cut border', ['', 'left', 'right'], '')
     }
   }
 }))
@@ -58,19 +94,37 @@ stories.addCodeExampleStory('Button with icon on the left', () => ({
               <Icon :icon="icon" :size="size"/>
               <span>{{slot}}</span>
             </Button>`,
-  data(){
-    return {
-      icon: select('Icon', iconsList, 'print'),
-      slot: text('Text', 'Jetzt bestellen'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Full Width', false),
-      outline: boolean('Outline', false),
-      loading: boolean('Loading', false),
-      capitalize: boolean('Capitalize', false),
-      size: select('Size', ['small', 'normal', 'big'], 'normal'),
-      color: select('Color', ['default', 'primary', 'secondary'], 'primary'),
-      cutSide: select('Cut border', ['', 'left', 'right'], '')
-    }
+  props: {
+    icon: {
+      default: select('Icon', iconsList, 'print')
+    },
+    slot: {
+      default: text('Text', 'Jetzt bestellen')
+    },
+    disabled: { 
+      default: boolean('Disabled', false)
+    },
+    block: { 
+      default: boolean('Full Width', false)
+    },
+    outline: {
+      default: boolean('Outline', false)
+    },
+    loading: {
+      default: boolean('Loading', false)
+    },
+    capitalize: {
+      default: boolean('Capitalize', false)
+    },
+    size: {
+      default: select('Size', ['small', 'normal', 'big'], 'normal')
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'secondary'], 'primary')
+    },
+    cutSide: {
+      default: select('Cut border', ['', 'left', 'right'], '')
+  }
   }
 }))
 
@@ -79,18 +133,36 @@ stories.addCodeExampleStory('Button with icon on the right', () => ({
               <span>{{slot}}</span>
               <Icon :icon="icon" />
             </Button>`,
-  data(){
-    return {
-      icon: select('Icon', iconsList, 'print'),
-      slot: text('Text', 'Jetzt bestellen'),
-      disabled: boolean('Disabled', false),
-      block: boolean('Full Width', false),
-      outline: boolean('Outline', false),
-      loading: boolean('Loading', false),
-      capitalize: boolean('Capitalize', false),
-      size: select('Size', ['small', 'normal', 'big'], 'normal'),
-      color: select('Color', ['default', 'primary', 'secondary'], 'primary'),
-      cutSide: select('Cut border', ['', 'left', 'right'], '')
+  props: {
+    icon: {
+      default: select('Icon', iconsList, 'print')
+    },
+    slot: {
+      default: text('Text', 'Jetzt bestellen')
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Full Width', false)
+    },
+    outline: {
+      default: boolean('Outline', false)
+    },
+    loading: {
+      default: boolean('Loading', false)
+    },
+    capitalize: {
+      default: boolean('Capitalize', false)
+    },
+    size: {
+      default: select('Size', ['small', 'normal', 'big'], 'normal')
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'secondary'], 'primary')
+    },
+    cutSide: {
+      default: select('Cut border', ['', 'left', 'right'], '')
     }
   }
 }))

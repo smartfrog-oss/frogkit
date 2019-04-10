@@ -38,6 +38,9 @@
         isOpen: this.open
       }
     },
+    updated () {
+      this.isOpen = this.open
+    },
     methods:{
       toggle(){
         this.isOpen = !this.isOpen

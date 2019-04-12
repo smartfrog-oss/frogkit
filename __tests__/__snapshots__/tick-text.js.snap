@@ -2,22 +2,22 @@
 
 exports[`Tick Text component should render component and match snapshot 1`] = `
 <section class="fk-tick-text fk-tick-text--orange">
-    <flex align="top" class="fk-tick-text__container">
-        <icon icon="checkmark" color="orange" class="fk-tick-text__icon"></icon>
-        <flex column="" grow="">
-            <div class="fk-tick-text__placeholder">some text goes here</div>
-        </flex>
+  <flex align="top" class="fk-tick-text__container">
+    <icon icon="checkmark" color="orange" class="fk-tick-text__icon"></icon>
+    <flex column="" grow="">
+      <div class="fk-tick-text__placeholder">some text goes here</div>
     </flex>
+  </flex>
 </section>
 `;
 
 exports[`Tick Text component should render component with bold text 1`] = `
 <section class="fk-tick-text fk-tick-text--orange fk-tick-text--bold">
-    <flex align="top" class="fk-tick-text__container">
-        <icon icon="checkmark" color="orange" class="fk-tick-text__icon"></icon>
-        <flex column="" grow="">
-            <div class="fk-tick-text__placeholder--bold">some text goes here</div>
-        </flex>
+  <flex align="top" class="fk-tick-text__container">
+    <icon icon="checkmark" color="orange" class="fk-tick-text__icon"></icon>
+    <flex column="" grow="">
+      <div class="fk-tick-text__placeholder--bold">some text goes here</div>
     </flex>
+  </flex>
 </section>
 `;

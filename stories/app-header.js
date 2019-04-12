@@ -35,8 +35,12 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
       username: 'john.doe@lorem.com',
       languages,
       emitted: '',
-      activeLang: select('activeLang', ['en', 'de'], 'en')
     }
+  },
+  props: {
+    activeLang: {
+      default: select('activeLang', ['en', 'de'], 'en')
+    } 
   },
   methods: {
     onLogout() {

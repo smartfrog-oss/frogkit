@@ -1,19 +1,17 @@
 {
   "presets": [
-    ["env", {
-      "modules": false
+    ["@babel/preset-env", {
+      "modules": false,
+      "targets": {
+        "uglify": true,
+        "ios": 8
+      }
     }],
-    "stage-2"
   ],
-  "plugins": ["transform-runtime", "transform-vue-jsx"],
   "env": {
     "test": {
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "current"
-          }
-        }]
+        ["env", { "targets": { "node": "current" }}]
       ]
     }
   }

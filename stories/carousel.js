@@ -21,12 +21,16 @@ stories.addCodeExampleStory('kitchen sink', () => ({
   // methods: {
   //   action: action('button-click')
   // },
-  data() {
-    return {
-      active: number('Active', 0, {min: 0, max: 3, step: 1 }),
-      loop: boolean('Loop', false), 
-      length: number('Slides', 3, {range: true, min: 1, max: 7, step: 1 }),
-    }
+  props: {
+    active: {
+      default: number('Active', 0, {min: 0, max: 3, step: 1 })
+    },
+    loop: {
+      default: boolean('Loop', false)
+    }, 
+    length: {
+      default: number('Slides', 3, {range: true, min: 1, max: 7, step: 1 })
+    },
   },
   computed:{
     slides() {

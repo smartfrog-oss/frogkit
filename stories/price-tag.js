@@ -13,12 +13,18 @@ stories.add(
     <p slot="suffix">{{suffix}}</p>
   </PriceTag>  
   `,
-    data() {
-      return {
-        value: text('Value', '9.95'),
-        prefix: text('Prefix', 'from'),
-        suffix: text('Suffix', ''),
-        code: select('Code', ['EUR', 'GBP', 'CHF', 'USD']),
+    props: {
+      value: {
+        default: text('Value', '9.95')
+      },
+      prefix: {
+        default: text('Prefix', 'from')
+      },
+      suffix: {
+        default: text('Suffix', '')
+      },
+      code: {
+        default: select('Code', ['EUR', 'GBP', 'CHF', 'USD'])
       }
     },
   }),

@@ -8,19 +8,34 @@ import Grid from '@/components/grid'
 const stories = storiesOf('Layout / Grid System', module)
 
 stories.addCodeExampleStory('kitchen Sink', () => {
-  const bp = select('min breaking-point', ['xs', 'sm', 'md', 'lg', 'xl'], 'xs')
-  const fluid = boolean('Fluid', false)
   return {
     template: `
-    <Grid :fluid=${fluid}>
-      <Row><Col ${bp}12><div class="demo"> 12 </div></Col></Row>
-      <Row><Col ${bp}6 v-for="i in 2" :key="i"><div class="demo"> 6 </div></Col></Row>
-      <Row><Col ${bp}4 v-for="i in 3" :key="i"><div class="demo"> 4 </div></Col></Row>
-      <Row><Col ${bp}3 v-for="i in 4" :key="i"><div class="demo"> 3 </div></Col></Row>
-      <Row><Col ${bp}2 v-for="i in 6" :key="i"><div class="demo"> 2 </div></Col></Row>
-      <Row><Col ${bp}1 v-for="i in 12" :key="i"><div class="demo">1 </div></Col></Row>
+    <Grid :fluid="fluid">
+      <Row><Col v-bind="getBreakPoint(12)"><div class="demo"> 12 </div></Col></Row>
+      <Row><Col v-bind="getBreakPoint(6)" v-for="i in 2" :key="i"><div class="demo"> 6 </div></Col></Row>
+      <Row><Col v-bind="getBreakPoint(4)" v-for="i in 3" :key="i"><div class="demo"> 4 </div></Col></Row>
+      <Row><Col v-bind="getBreakPoint(3)" v-for="i in 4" :key="i"><div class="demo"> 3 </div></Col></Row>
+      <Row><Col v-bind="getBreakPoint(2)" v-for="i in 6" :key="i"><div class="demo"> 2 </div></Col></Row>
+      <Row><Col v-bind="getBreakPoint(1)" v-for="i in 12" :key="i"><div class="demo">1 </div></Col></Row>
     </Grid>
-    `}
+    `,
+    props: {
+      fluid: {
+        default: boolean('Fluid', false)
+      },
+      bp: {
+        default: select('min breaking-point', ['xs', 'sm', 'md', 'lg', 'xl'], 'xs')
+      }
+    },
+    methods: {
+      getBreakPoint(size) {
+        const key = `${this.bp}${size}`
+        const props = {}
+        props[key] = true
+        return props
+      }
+    }
+  }
 }, Grid)
 
 stories.addCodeExampleStory('Fill space', () => {
@@ -34,12 +49,31 @@ const n = number('size', 1, {
     template: `
     <Grid>
       <Row>
-        <Col xs${n} ><div class="demo">${n} </div></Col>
+        <Col v-bind="getSize()" ><div class="demo">{{n}} </div></Col>
         <Col><div class="demo"> fillspace </div></Col>
-        <Col xs${n} ><div class="demo">${n} </div></Col>
+        <Col v-bind="getSize()" ><div class="demo">{{n}} </div></Col>
       </Row>
     </Grid>
-    `}
+    `,
+    props: {
+      n: {
+        default:  number('size', 1, {
+          range: true,
+          min: 1,
+          max: 12,
+          step: 1,
+       })
+      }
+    },
+    methods: {
+      getSize() {
+        const key = `xs${this.n}`
+        const props = {}
+        props[key] = true
+        return props
+      }
+    }
+  }
 })
 
 stories.addCodeExampleStory('Extra small', () => ({

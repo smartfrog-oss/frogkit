@@ -46,14 +46,22 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
     return {
       navMainItems: navMainItems,
       navExtraItems: navExtraItems,
-      cartCounter: number('Cart Items', 0),
       formItems: formItems,
       countries: countries,
       currentCountry: 'de',
       countrySelectLabel: 'Your Country is missing? Click here:',
-      emitted: '',
-      navOnly: boolean('Show main navigation only', false),
-      wrongInput: boolean('Show login error', false)
+      emitted: ''
+    }
+  },
+  props: {
+    cartCounter: {
+      default: number('Cart Items', 0)
+    },
+    navOnly: {
+      default: boolean('Show main navigation only', false)
+    },
+    wrongInput: {
+      default: boolean('Show login error', false)
     }
   },
   methods: {

@@ -33,13 +33,10 @@
         default: false
       }
     },
-    data(){
+    data () {
       return {
         isOpen: this.open
       }
-    },
-    updated () {
-      this.isOpen = this.open
     },
     methods:{
       toggle(){

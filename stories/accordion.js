@@ -6,7 +6,7 @@ const stories = storiesOf('Accordion', module)
 
 
 stories.addCodeExampleStory('closed accordion', () => ({
-  template: `<Accordion :placeholder="placeholder" :open="open">
+  template: `<Accordion :placeholder="placeholder" :open="false">
                 <DescriptionBlock class="m-b-30" title="Smartfrog HD Cam">
                   <Title size="xs" color="primary">A title from slot.</Title>
                   The Smartfrog Cam can easily be connected with your Wi-Fi using the Smartfrog App. It will then 

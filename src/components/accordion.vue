@@ -33,7 +33,7 @@
         default: false
       }
     },
-    data(){
+    data () {
       return {
         isOpen: this.open
       }

@@ -1,7 +1,10 @@
-const listenerOptions = {passive: true, capture: false}
+const listenerOptions = {
+  passive: true,
+  capture: false
+}
 
 export default {
-  inserted: function(el, binding, vnode) {
+  inserted: function (el, binding, vnode) {
     const threshold = binding.value || 100
     let elWidth = 0
     let startPos = null
@@ -12,6 +15,8 @@ export default {
       startPos = getTouchPos(e)
       elWidth = el.clientWidth
 
+      // NOTE: https://stackoverflow.com/questions/2987706/touchend-event-doesnt-work-on-android#answer-37390916
+      document.addEventListener('touchcancel', onTouchEnd, listenerOptions)
       document.addEventListener('touchend', onTouchEnd, listenerOptions)
       document.addEventListener('mouseup', onTouchEnd, listenerOptions)
 
@@ -28,6 +33,7 @@ export default {
       } else {
         vnode.context.$emit('swipeEnd')
       }
+      document.removeEventListener('touchcancel', onTouchEnd)
       document.removeEventListener('touchend', onTouchEnd)
       document.removeEventListener('mouseup', onTouchEnd)
 

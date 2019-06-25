@@ -21,16 +21,20 @@ stories.addCodeExampleStory('kitchen sink', () => ({
   // methods: {
   //   action: action('button-click')
   // },
-  data() {
-    return {
-      active: number('Active', 0, {min: 0, max: 3, step: 1 }),
-      loop: boolean('Loop', false), 
-      length: number('Slides', 3, {range: true, min: 1, max: 7, step: 1 }),
-    }
+  props: {
+    active: {
+      default: number('Active', 0, {min: 0, max: 3, step: 1 })
+    },
+    loop: {
+      default: boolean('Loop', false)
+    }, 
+    length: {
+      default: number('Slides', 3, {range: true, min: 1, max: 7, step: 1 })
+    },
   },
   computed:{
     slides() {
-      return Array.from({length: this.length}).map((_,i) => `https://unsplash.it/320?random&${i}`)
+      return Array.from({length: this.length}).map((_,i) => ({file: `https://unsplash.it/320?random&${i}`}) )
     }
   }
 }), Carousel)
@@ -47,7 +51,7 @@ stories.addCodeExampleStory('Product page', () => ({
   `,
   data() {
     return {
-      slides: Array.from({length: 3}).map((_,i) => `https://s3-eu-west-1.amazonaws.com/cdn.smartfrog.com/design/shop/camera_picts/sf_cam${i+1}%402x.jpg`)
+      slides: Array.from({length: 3}).map((_,i) => ({file: `https://s3-eu-west-1.amazonaws.com/cdn.smartfrog.com/design/shop/camera_picts/sf_cam${i+1}%402x.jpg`}))
     }
   },
 }), Carousel)

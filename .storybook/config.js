@@ -1,14 +1,18 @@
-import { configure, addDecorator, setAddon } from '@storybook/vue'
+import { configure, addDecorator, setAddon, addParameters } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
-addDecorator(withKnobs)
-
+import { themes } from '@storybook/theming';
 import pkg from '../package.json'
 
-import { setOptions } from '@storybook/addon-options'
-setOptions({
-  name: `Frogkit ${pkg.version}`,
-  url: 'https://github.com/smartfrog-oss/frogkit',
-})
+
+addParameters({
+  options: {
+    name: `Frogkit ${pkg.version}`,
+    url: 'https://github.com/smartfrog-oss/frogkit',
+    theme: themes.dark
+  },
+});
+
+addDecorator(withKnobs)
 
 import Vue from 'vue'
 import '../src/stylus/main.styl'
@@ -31,8 +35,9 @@ import { ComponentInfoDecorator } from './decorators'
 
 setAddon({
   addCodeExampleStory(storyName, storyFn, component) {
-    this.add(`${storyName} ⚡`, context => ComponentInfoDecorator(storyFn, component))
-  },
+    const decorator = () => ComponentInfoDecorator(storyFn, component)
+    this.add(`${storyName} ⚡`, storyFn, {decorators: [decorator]})
+  }
 })
 
 configure(loadStories, module)

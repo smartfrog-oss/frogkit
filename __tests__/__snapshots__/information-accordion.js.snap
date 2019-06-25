@@ -2,6 +2,6 @@
 
 exports[`Information Accordion component should render component and match snapshot 1`] = `
 <informationblock placeholder="some title goes here" title="some title goes here" class="fk-information-accordion">
-    <div class="fk-information-accordion__content"></div>
+  <div class="fk-information-accordion__content"></div>
 </informationblock>
 `;

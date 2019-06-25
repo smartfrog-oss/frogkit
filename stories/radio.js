@@ -17,7 +17,11 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
   data() {
     return {
       selectedValue: '',
-      slot: text('Text', 'This is the label')
+    }
+  },
+  props: {
+    slot: {
+      default: text('Text', 'This is the label')
     }
   }
 }), Radio)
@@ -38,9 +42,17 @@ stories.addCodeExampleStory('Multiple radio', () => ({
   data() {
     return {
       selectedValue: 'Value 2',
-      slot1: text('Label 1', 'Value 1'),
-      slot2: text('Label 2', 'Value 2'),
-      slot3: text('Label 3', 'Value 3')
+    }
+  },
+  props: {
+    slot1: {
+      default: text('Label 1', 'Value 1')
+    },
+    slot2: {
+      default: text('Label 2', 'Value 2')
+    },
+    slot3: {
+      default: text('Label 3', 'Value 3')
     }
   }
 }))
@@ -61,10 +73,18 @@ stories.addCodeExampleStory('Multiple radio disabled', () => ({
   data() {
     return {
       selectedValue: 'Value 3',
-      slot1: text('Label 1', 'Value 1'),
-      slot2: text('Label 2', 'Value 2'),
-      slot3: text('Label 3', 'Value 3'),
       disabled: true
+    }
+  },
+  props: {
+    slot1: {
+      default: text('Label 1', 'Value 1')
+    },
+    slot2: {
+      default: text('Label 2', 'Value 2')
+    },
+    slot3: {
+      default: text('Label 3', 'Value 3')
     }
   }
 }))

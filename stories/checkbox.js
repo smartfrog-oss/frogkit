@@ -14,13 +14,23 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
               </Checkbox>
               <h1 class="demo-title">Model: {{selectedValue}}</h1>
             </div>`,
-  data() {
+  data () {
     return {
-      disabled: boolean('Disabled', true),
-      required: boolean('Required', true),
-      value: text('value', 'accepted'),
-      selectedValue: false,
-      slot: text('Text', 'I accept terms of use')
+      selectedValue: false
+    }
+  },
+  props: {
+    disabled: {
+      default: boolean('Disabled', true)
+    },
+    required: {
+      default: boolean('Required', true)
+    },
+    value: {
+      default: text('value', 'accepted')
+    },
+    slot: {
+      default: text('Text', 'I accept terms of use')
     }
   }
 }), Checkbox)
@@ -42,8 +52,12 @@ stories.addCodeExampleStory('Value Binding', () => ({
               </Checkbox>`,
   data() {
     return {
-      value: text('Value', 'selected'),
       selectedValue: ''
+    }
+  },
+  props: {
+    value: {
+      default: text('Value', 'selected')
     }
   }
 }), Checkbox)
@@ -54,9 +68,15 @@ stories.addCodeExampleStory('Binding other value ', () => ({
               </Checkbox>`,
   data() {
     return {
-      trueValue: text('True Value', 'Yep'),
-      falseValue: text('False Value', 'Nope'),
       selectedValue: 'Yep'
+    }
+  },
+  props: {
+    trueValue: {
+      default: text('True Value', 'Yep')
+    },
+    falseValue: {
+      default: text('False Value', 'Nope')
     }
   }
 }), Checkbox)

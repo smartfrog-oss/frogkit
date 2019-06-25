@@ -6,9 +6,9 @@ const stories = storiesOf('Certificate Badges', module)
 
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template: `<CertificateBadges :width="width"/>`,
-  data () {
-    return {
-      width: text('Width', '65px')
+  props: {
+    width: {
+      default: text('Width', '65px')
     }
   }
 }), CertificateBadges)

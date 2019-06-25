@@ -24,14 +24,12 @@ cache:
     - "node_modules"
 
 deploy:
-  - provider: npm
-    email: mouafa.ahmed@smartfrog.com
-    api_key:
-      secure: $NPM_TOKEN
-    on:
-      repo: smartfrog-oss/frogkit
-      branch: development
+  - provider: script
     skip_cleanup: true
+    script:
+      - npx semantic-release
+    on:
+      branch: development
 
   - provider: pages
     skip-cleanup: true

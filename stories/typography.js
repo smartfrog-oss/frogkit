@@ -9,12 +9,18 @@ stories.add('kitchen sink', () => ({
   template: `<FkText :size="size" :color="color" :weight="weight">
               {{slot}}
             </FkText>`,
-  data(){
-    return {
-      slot: text('Text', 'Lorem ipsum dolorem sit amet aliquando'),
-      size: select('Size', ['xl', 'lg', 'md', 'sm', 'xs'], 'md'),
-      color: select('Color', ['default', 'primary', 'light'], 'default'),
-      weight: select('Weight', ['default', 'bold', 'slim'])
+  props: {
+    slot: {
+      default: text('Text', 'Lorem ipsum dolorem sit amet aliquando')
+    },
+    size: {
+      default: select('Size', ['xl', 'lg', 'md', 'sm', 'xs'], 'md')
+    },
+    color: {
+      default: select('Color', ['default', 'primary', 'light'], 'default')
+    },
+    weight: {
+      default: select('Weight', ['default', 'bold', 'slim'])
     }
   }
 }))

@@ -24,8 +24,8 @@ describe('Checkbox component', () => {
   })
 
   it('should work with custom value when selected', () => {
-    const wrapper = mount(Checkbox, { propsData: { checked: '', value: 'selected' } })
-    expect(wrapper.vm.checked).toBe('')
+    const wrapper = mount(Checkbox, { propsData: { checked: false, value: 'selected' } })
+    expect(wrapper.vm.checked).toBeFalsy()
     expect(wrapper.vm.isChecked).toBe(false)
     wrapper.trigger('click')
     expect(wrapper.emitted().change[0]).toEqual(['selected'])

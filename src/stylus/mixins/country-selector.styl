@@ -59,6 +59,7 @@ big-screen-mixin()
       p
         color: $navColorPrimary
         padding: 0 10px
+        white-space: nowrap
       svg
         fill: $toggleArrowColor
         width: 12px
@@ -94,9 +95,10 @@ countries-mixin()
   small-screen-mixin()
   big-screen-mixin()
   color: $navColor
-  &__toggle
+  & &__toggle
     background: $white
     cursor: pointer
+    flex-wrap: nowrap
     img
       image-rendering pixelated
       height $flag-size

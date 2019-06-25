@@ -15,11 +15,15 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
       <h1 class="demo-title">Hello</h1>
     </Dialogue>
   `,
-  data() {
-    return {
-      visible: boolean('Visible', true),
-      dark: boolean('Dark', true),
-      requireAction: boolean('Require Action', false)
-    }
+  props: {
+      visible: {
+        default: boolean('Visible', true)
+      },
+      dark: {
+        default: boolean('Dark', true)
+      },
+      requireAction: {
+        default: boolean('Require Action', false)
+      }
   }
 }), Dialogue)

@@ -22,12 +22,24 @@ stories.addCodeExampleStory('Kitchen Sink', () => ({
     `,
   data() {
     return {
-      placeholder: text('label', 'Select an option'),
-      options: options,
-      required: boolean('Required', false),
-      disabled: boolean('Disabled', false),
-      block: boolean('Full Width', false),
-      value: select('Value', ['', ...options.map(i => i.value)], '')
+      options: options
+    }
+  },
+  props: {
+    placeholder: {
+      default: text('label', 'Select an option')
+    },
+    required: {
+      default: boolean('Required', false)
+    },
+    disabled: {
+      default: boolean('Disabled', false)
+    },
+    block: {
+      default: boolean('Full Width', false)
+    },
+    value: {
+      default: select('Value', ['', ...options.map(i => i.value)], '')
     }
   }
 }), Select)

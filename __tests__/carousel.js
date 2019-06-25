@@ -2,9 +2,9 @@ import { mount, shallow } from 'vue-test-utils'
 import Carousel from '@/components/carousel'
 
 const propsData = {
-  slides: Array.from({ length: 3 }).map((_, i) => `https://unsplash.it/320?random&${i}`),
+  slides: Array.from({ length: 3 }).map((_, i) => ({file: `https://unsplash.it/320?random&${i}`, description: 'smartfrog cam'})),
   loop: true,
-  active: 1,
+  active: 1  
 }
 
 describe('Carousel component', () => {

@@ -17,9 +17,9 @@ stories.addCodeExampleStory('Description with text', () => ({
                 </DescriptionBlock>
               </Col>
             </Grid>`,
-  data () {
-    return {
-      title: text('Title', 'Description with text')
+  props: {
+    title: {
+      default: text('Title', 'Description with text')
     }
   }
 }), DescriptionBlock)
@@ -34,9 +34,9 @@ stories.addCodeExampleStory('Description with list', () => ({
                 </DescriptionBlock>
               </Col>
             </Grid>`,
-  data () {
-    return {
-      title: text('Title', 'Description with list')
+  props: {
+    title: {
+      default: text('Title', 'Description with list')
     }
   }
 }), DescriptionBlock)

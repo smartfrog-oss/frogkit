@@ -6,9 +6,9 @@ const stories = storiesOf('Logistic Badges', module)
 
 stories.addCodeExampleStory('Kitchen Sink', () => ({
   template: `<LogisticBadges :width="width"/>`,
-  data () {
-    return {
-      width: text('Width', '142px')
+  props: {
+    width: {
+      default: text('Width', '142px')
     }
   }
 }), LogisticBadges)

@@ -36,8 +36,12 @@ stories.addCodeExampleStory(
     data() {
       return {
         options: [{ value: 'Mr', label: 'Mr' }, { value: 'Mrs', label: 'Mrs' }],
-        pending: boolean('Enable', true),
       }
+    },
+    props: {
+      pending: {
+        default: boolean('Enable', true)
+      },
     },
     methods: {
       submit() {},

@@ -7,7 +7,7 @@
 </style>
 
 <template>
-  <input :type="type" class="fk-input" :class="classObject" :value="value" @input="onInput" :disabled="disabled"/>
+  <input :type="type" class="fk-input" :class="classObject" :value="value" @input="onInput" @keyup="onKeyup" :disabled="disabled"/>
 </template>
 
 <script>
@@ -80,6 +80,9 @@
         const tmp = zip.replace(/\s+/g, '')
         if (tmp.length < 5) return tmp
         return tmp.slice(0, -3).concat(' ').concat(tmp.slice(-3))
+      },
+      onKeyup() {
+        this.$emit('keyup')
       }
     }
   }

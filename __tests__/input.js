@@ -66,7 +66,7 @@ describe('Input component', () => {
     })
 
     it('should render valid phone', () => {
-      const wrapper = mount(Input, { propsData : { value:'+25', type: 'phone', required: true } })
+      const wrapper = mount(Input, { propsData : { value:'1234567890', type: 'phone', required: true } })
       wrapper.trigger('input')
       expect(wrapper.hasClass('fk-input--invalid')).toBe(false)
     })

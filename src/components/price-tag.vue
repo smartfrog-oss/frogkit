@@ -9,10 +9,10 @@
 <template>
   <div class="fk-price-tag" >
     <slot name="prefix"></slot>
-    <p class="fk-price-tag__price">
+    <p class="fk-price-tag__price" v-if="code">
       {{price.head}}<b>{{price.natural}}<template v-if="price.decimal">{{price.separator}}<sup class="fk-price-tag__decimal">{{price.decimal}}</sup></template></b>{{price.tail}}
     </p>
-    <slot name="suffix"></slot>
+    <slot name="suffix" v-if="code"></slot>
   </div>
 </template>
 
@@ -28,19 +28,19 @@
       },
       code: {
         value: String,
-        default: 'EUR'
+        default: ''
       }
     },
     computed:{
       price(){
         const float = Number(this.value)
         if (Number.isNaN(float)) return {}
-        
+
         const config = currencyFormatter.findCurrency(this.code)
         const natural = Math.trunc(float)
         const decimal = (float && float === natural) ? null : (float - natural).toFixed(config.decimalDigits).toString().split(".")[1]
 
-        let head = '' 
+        let head = ''
         let tail = ''
 
         if (config.symbolOnLeft) {
